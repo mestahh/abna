@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lakásbiztosítás Igényfelmérő – ABNA | Tata</title>
+  <meta name="description" content="Töltse ki rövid igényfelmérőnket és személyre szabott lakásbiztosítási ajánlatot küldünk Önnek 24 órán belül." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Főnavigáció">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="ABNA főoldal">
+        <div class="logo-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="logo-text">
+          <span class="logo-name">ABNA</span>
+          <span class="logo-sub">Biztosítási Tanácsadás</span>
+        </div>
+      </a>
+      <ul class="navbar-menu" role="list">
+        <li><a href="index.html"  class="navbar-link">Főoldal</a></li>
+        <li><a href="lakas.html"  class="navbar-link active">Lakás</a></li>
+        <li><a href="kgfb.html"   class="navbar-link">KGFB</a></li>
+        <li><a href="elet.html"   class="navbar-link">Élet</a></li>
+        <li><a href="tel:+36303603390" class="navbar-cta">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>&nbsp; +36 30 360 3390
+        </a></li>
+      </ul>
+      <button class="navbar-toggle" aria-label="Menü megnyitása" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="navbar-mobile" role="dialog" aria-label="Mobil navigáció">
+    <a href="index.html"  class="navbar-mobile-link"><i class="fa-solid fa-house"></i>Főoldal</a>
+    <a href="lakas.html"  class="navbar-mobile-link active"><i class="fa-solid fa-building"></i>Lakásbiztosítás</a>
+    <a href="kgfb.html"   class="navbar-mobile-link"><i class="fa-solid fa-car"></i>KGFB</a>
+    <a href="elet.html"   class="navbar-mobile-link"><i class="fa-solid fa-heart-pulse"></i>Élet- és Balesetbiztosítás</a>
+    <a href="tel:+36303603390" class="navbar-cta"><i class="fa-solid fa-phone"></i>&nbsp; +36 30 360 3390</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Lakásbiztosítás igényfelmérő">
+      <div class="container">
+        <div class="page-hero-inner">
+          <nav class="breadcrumb" aria-label="Útvonal">
+            <a href="index.html">Főoldal</a>
+            <span class="sep" aria-hidden="true">/</span>
+            <a href="lakas.html">Lakásbiztosítás</a>
+            <span class="sep" aria-hidden="true">/</span>
+            <span aria-current="page">Igényfelmérő</span>
+          </nav>
+          <div class="page-hero-icon" aria-hidden="true">🏠</div>
+          <h1>Lakásbiztosítás Igényfelmérő</h1>
+          <p class="page-hero-lead">
+            Töltse ki az alábbi rövid felmérőt – 24 órán belül személyre szabott
+            ajánlattal keressük meg Önt!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM + SIDEBAR -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="form-page-grid">
+
+          <!-- FORM CARD -->
+          <div class="form-card fade-up">
+
+            <!-- Success state (hidden initially) -->
+            <div class="form-success" role="alert" aria-live="polite">
+              <div class="form-success-icon" aria-hidden="true">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h3>Köszönjük az érdeklődést!</h3>
+              <p>Hamarosan felvesszük Önnel a kapcsolatot. Ha sürgős, hívjon minket közvetlenül!</p>
+              <a href="tel:+36303603390" class="btn btn-primary">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                +36 30 360 3390
+              </a>
+            </div>
+
+            <!-- The form -->
+            <form
+              class="abna-form"
+              data-subject="Lakásbiztosítás igényfelmérő – ABNA"
+              novalidate
+              aria-label="Lakásbiztosítás igényfelmérő"
+            >
+              <p class="form-card-title">Személyes adatok</p>
+              <p class="form-card-sub">A csillaggal jelölt mezők kitöltése kötelező.</p>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="nev">Teljes neve <span class="req" aria-hidden="true">*</span></label>
+                  <input class="form-input" type="text" id="nev" name="Teljes neve" placeholder="pl. Kovács Péter" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="telefon">Telefonszám <span class="req" aria-hidden="true">*</span></label>
+                  <input class="form-input" type="tel" id="telefon" name="Telefonszám" placeholder="+36 30 …" required autocomplete="tel" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">E-mail cím</label>
+                <input class="form-input" type="email" id="email" name="E-mail" placeholder="pelda@email.hu" autocomplete="email" />
+              </div>
+
+              <div class="form-divider" aria-hidden="true"></div>
+              <p class="form-section-title">Az ingatlanról</p>
+
+              <div class="form-group">
+                <label class="form-label" for="cim">Ingatlan helyszíne / Irányítószám</label>
+                <input class="form-input" type="text" id="cim" name="Ingatlan helyszíne" placeholder="pl. 2890 Tata, Kossuth u. 1." autocomplete="street-address" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Ingatlan típusa</label>
+                <div class="radio-group" role="radiogroup" aria-label="Ingatlan típusa">
+                  <label class="radio-option">
+                    <input type="radio" name="Ingatlan típusa" value="Családi ház" />
+                    <span>Családi ház</span>
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="Ingatlan típusa" value="Társasházi lakás" />
+                    <span>Társasházi lakás</span>
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="Ingatlan típusa" value="Ikerház" />
+                    <span>Ikerház / sorház</span>
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="Ingatlan típusa" value="Egyéb" />
+                    <span>Egyéb</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="meret">Alapterület (m²)</label>
+                  <input class="form-input" type="number" id="meret" name="Alapterület (m²)" placeholder="pl. 85" min="10" max="2000" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="epulesev">Építés éve (kb.)</label>
+                  <input class="form-input" type="number" id="epulesev" name="Építés éve" placeholder="pl. 1998" min="1800" max="2026" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="jelenlegi">Jelenlegi biztosítója (ha van)</label>
+                <input class="form-input" type="text" id="jelenlegi" name="Jelenlegi biztosító" placeholder="pl. Allianz, Generali, stb." />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="megjegyzes">Megjegyzés / Egyéb kérdés</label>
+                <textarea class="form-textarea" id="megjegyzes" name="Megjegyzés" placeholder="Írjon ide bármit, ami segíthet a személyre szabott ajánlat összeállításában…"></textarea>
+              </div>
+
+              <!-- GDPR consent -->
+              <div class="form-consent">
+                <input type="checkbox" id="consent" name="consent" required />
+                <label class="form-consent-text" for="consent">
+                  Elolvastam és elfogadom az <a href="#">Adatvédelmi tájékoztatót</a>.
+                  Hozzájárulok, hogy az ABNA az itt megadott adataimat kapcsolatfelvétel
+                  céljából kezelje. Az adatokat harmadik féllel nem osztjuk meg.
+                </label>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                  Igényfelmérő elküldése
+                </button>
+                <span class="form-note">
+                  <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                  Adatait biztonságosan kezeljük
+                </span>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- SIDEBAR -->
+          <aside class="subpage-sidebar" aria-label="Menetlépések és elérhetőség">
+
+            <div class="form-info-card fade-up fade-up-d1">
+              <h4>Hogyan működik?</h4>
+              <div class="form-info-step">
+                <div class="form-step-num" aria-hidden="true">1</div>
+                <div class="form-step-text">
+                  <strong>Kitölti a felmérőt</strong>
+                  <span>Mindössze 2–3 percet vesz igénybe</span>
+                </div>
+              </div>
+              <div class="form-info-step">
+                <div class="form-step-num" aria-hidden="true">2</div>
+                <div class="form-step-text">
+                  <strong>Mi összehasonlítjuk az ajánlatokat</strong>
+                  <span>A legjobb ár–érték arányú opciókat keressük meg</span>
+                </div>
+              </div>
+              <div class="form-info-step">
+                <div class="form-step-num" aria-hidden="true">3</div>
+                <div class="form-step-text">
+                  <strong>24 órán belül visszahívjuk</strong>
+                  <span>Személyre szabott ajánlattal és tanácsadással</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-card fade-up fade-up-d2">
+              <h4>Közvetlen elérhetőség</h4>
+              <div class="sidebar-contact-row">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <span>Szabó Balázs Márton</span>
+              </div>
+              <div class="sidebar-contact-row">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <a href="tel:+36303603390">+36 30 360 3390</a>
+              </div>
+              <div class="sidebar-contact-row">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:hello@abna.hu">hello@abna.hu</a>
+              </div>
+              <div class="sidebar-contact-row">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span>Ady Endre u. 29, 2890 Tata</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card fade-up fade-up-d3">
+              <h4>Egyéb biztosítások</h4>
+              <div class="sidebar-contact-row">
+                <i class="fa-solid fa-car" aria-hidden="true"></i>
+                <a href="felmero-kgfb.html">KGFB igényfelmérő</a>
+              </div>
+              <div class="sidebar-contact-row">
+                <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+                <a href="felmero-elet.html">Életbiztosítás felmérő</a>
+              </div>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-logo" aria-label="ABNA főoldal">
+            <div class="logo-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="logo-text">
+              <span class="logo-name">ABNA</span>
+              <span class="logo-sub">Biztosítási Tanácsadás</span>
+            </div>
+          </a>
+          <p class="footer-tagline">A Biztosítás Nem Alszik! – Tapasztalt biztosítási tanácsadással a megbízható védelemért.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigáció</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Főoldal</a></li>
+            <li><a href="lakas.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Lakásbiztosítás</a></li>
+            <li><a href="kgfb.html"  class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>KGFB</a></li>
+            <li><a href="elet.html"  class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Élet &amp; Baleset</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Igényfelmérők</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="felmero-lakas.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Lakásbiztosítás felmérő</a></li>
+            <li><a href="felmero-kgfb.html"  class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>KGFB felmérő</a></li>
+            <li><a href="felmero-elet.html"  class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Életbiztosítás felmérő</a></li>
+            <li><a href="felmero.html"        class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Általános kapcsolatfelvétel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Elérhetőség</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Ady Endre Utca 29<br>2890 Tata</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <a href="tel:+36303603390">+36 30 360 3390</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:hello@abna.hu">hello@abna.hu</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="year"></span> ABNA – A Biztosítás Nem Alszik! Minden jog fenntartva.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Adatvédelmi tájékoztató</a>
+          <a href="#" class="footer-bottom-link">ÁSZF</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
