@@ -2,50 +2,68 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kapcsolatfelvétel – ABNA Biztosítási Tanácsadás | Tata</title>
   <meta name="description" content="Vegye fel velünk a kapcsolatot! Töltse ki rövid igényfelmérőnket és 24 órán belül visszahívjuk." />
+  <link rel="canonical" href="https://abna.hu/felmero.html" />
+  <meta name="theme-color" content="#0b1a3f" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ABNA – A Biztosítás Nem Alszik!" />
+  <meta property="og:locale" content="hu_HU" />
+  <meta property="og:url" content="https://abna.hu/felmero.html" />
+  <meta property="og:title" content="Kapcsolatfelvétel – ABNA Biztosítási Tanácsadás | Tata" />
+  <meta property="og:description" content="Vegye fel velünk a kapcsolatot! Töltse ki rövid igényfelmérőnket és 24 órán belül visszahívjuk." />
+  <meta property="og:image" content="https://abna.hu/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+  <link rel="preload" href="fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" role="navigation" aria-label="Főnavigáció">
-    <div class="navbar-inner">
-      <a href="index.html" class="navbar-logo" aria-label="ABNA főoldal">
-        <div class="logo-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
-        <div class="logo-text">
-          <span class="logo-name">ABNA</span>
-          <span class="logo-sub">Biztosítási Tanácsadás</span>
-        </div>
-      </a>
-      <ul class="navbar-menu" role="list">
-        <li><a href="index.html"  class="navbar-link">Főoldal</a></li>
-        <li><a href="lakas.html"  class="navbar-link">Lakás</a></li>
-        <li><a href="kgfb.html"   class="navbar-link">KGFB</a></li>
-        <li><a href="elet.html"   class="navbar-link">Élet</a></li>
-        <li><a href="tel:+36303603390" class="navbar-cta">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i>&nbsp; +36 30 360 3390
-        </a></li>
-      </ul>
-      <button class="navbar-toggle" aria-label="Menü megnyitása" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+  <a class="skip-link" href="#main-content">Ugrás a tartalomra</a>
 
-  <div class="navbar-mobile" role="dialog" aria-label="Mobil navigáció">
-    <a href="index.html"  class="navbar-mobile-link"><i class="fa-solid fa-house"></i>Főoldal</a>
-    <a href="lakas.html"  class="navbar-mobile-link"><i class="fa-solid fa-building"></i>Lakásbiztosítás</a>
-    <a href="kgfb.html"   class="navbar-mobile-link"><i class="fa-solid fa-car"></i>KGFB</a>
-    <a href="elet.html"   class="navbar-mobile-link"><i class="fa-solid fa-heart-pulse"></i>Élet- és Balesetbiztosítás</a>
-    <a href="tel:+36303603390" class="navbar-cta"><i class="fa-solid fa-phone"></i>&nbsp; +36 30 360 3390</a>
-  </div>
+  <header class="navbar" data-navbar>
+    <nav class="navbar-inner" aria-label="Főnavigáció">
+      <a href="index.html" class="logo" aria-label="ABNA – főoldal">
+        <span class="logo-mark" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-shield-check"></use></svg></span>
+        <span class="logo-text">
+          <span class="logo-name">ABNA</span>
+          <span class="logo-sub">A Biztosítás Nem Alszik</span>
+        </span>
+      </a>
+
+      <ul class="nav-links">
+          <li><a href="lakas.html" class="nav-link">Lakás</a></li>
+          <li><a href="kgfb.html" class="nav-link">KGFB</a></li>
+          <li><a href="elet.html" class="nav-link">Élet és baleset</a></li>
+          <li><a href="index.html#rolunk" class="nav-link">Rólunk</a></li>
+          <li><a href="felmero.html" class="nav-link" aria-current="page">Kapcsolat</a></li>
+      </ul>
+
+      <a href="tel:+36303603390" class="nav-cta"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg><span>+36 30 360 3390</span></a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü megnyitása">
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="lakas.html" class="mobile-link"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-house"></use></svg><span>Lakásbiztosítás</span></a>
+      <a href="kgfb.html" class="mobile-link"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-car"></use></svg><span>KGFB és casco</span></a>
+      <a href="elet.html" class="mobile-link"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-heart-pulse"></use></svg><span>Élet- és balesetbiztosítás</span></a>
+      <a href="index.html#rolunk" class="mobile-link"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-user"></use></svg><span>Rólunk</span></a>
+      <a href="felmero.html" class="mobile-link" aria-current="page"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-mail"></use></svg><span>Kapcsolat és ajánlatkérés</span></a>
+      <a href="tel:+36303603390" class="btn btn-primary btn-block"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg>Hívás: +36 30 360 3390</a>
+    </div>
+  </header>
 
   <main id="main-content">
 
@@ -58,7 +76,6 @@
             <span class="sep" aria-hidden="true">/</span>
             <span aria-current="page">Kapcsolatfelvétel</span>
           </nav>
-          <div class="page-hero-icon" aria-hidden="true">✉️</div>
           <h1>Kapcsolatfelvétel</h1>
           <p class="page-hero-lead">
             Írjon nekünk vagy töltse ki az alábbi felmérőt – 24 órán belül
@@ -74,16 +91,16 @@
         <div class="form-page-grid">
 
           <!-- FORM CARD -->
-          <div class="form-card fade-up">
+          <div class="form-card reveal">
 
-            <div class="form-success" role="alert" aria-live="polite">
+            <div class="form-success" role="status" tabindex="-1" hidden>
               <div class="form-success-icon" aria-hidden="true">
-                <i class="fa-solid fa-check"></i>
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-check"></use></svg>
               </div>
-              <h3>Köszönjük az érdeklődést!</h3>
-              <p>Hamarosan felvesszük Önnel a kapcsolatot. Ha sürgős, hívjon minket közvetlenül!</p>
+              <h2 class="form-success-title">Köszönjük az érdeklődést!</h2>
+              <p data-success-text>Hamarosan felvesszük Önnel a kapcsolatot. Ha sürgős, hívjon minket közvetlenül!</p>
               <a href="tel:+36303603390" class="btn btn-primary">
-                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg>
                 +36 30 360 3390
               </a>
             </div>
@@ -126,9 +143,9 @@
                 </select>
               </div>
 
-              <div class="form-group">
-                <label class="form-label">Mikor hívhatjuk? (opcionális)</label>
-                <div class="radio-group" role="radiogroup" aria-label="Visszahívás ideje">
+              <fieldset class="form-group">
+                <legend class="form-label">Mikor hívhatjuk? (opcionális)</legend>
+                <div class="radio-group">
                   <label class="radio-option">
                     <input type="radio" name="Visszahívás ideje" value="Bármikor" />
                     <span>Bármikor</span>
@@ -146,7 +163,7 @@
                     <span>Este (17–19)</span>
                   </label>
                 </div>
-              </div>
+              </fieldset>
 
               <div class="form-group">
                 <label class="form-label" for="megjegyzes">Üzenet / Megjegyzés</label>
@@ -156,19 +173,21 @@
               <div class="form-consent">
                 <input type="checkbox" id="consent" name="consent" required />
                 <label class="form-consent-text" for="consent">
-                  Elolvastam és elfogadom az <a href="#">Adatvédelmi tájékoztatót</a>.
+                  Elolvastam és elfogadom az <a href="adatvedelem.html" target="_blank">Adatvédelmi tájékoztatót</a>.
                   Hozzájárulok, hogy az ABNA az itt megadott adataimat kapcsolatfelvétel
                   céljából kezelje. Az adatokat harmadik féllel nem osztjuk meg.
                 </label>
               </div>
 
+              <p class="form-status" role="alert" hidden></p>
+
               <div class="form-submit-row">
                 <button type="submit" class="btn btn-primary btn-lg">
-                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                  <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-send"></use></svg>
                   Üzenet elküldése
                 </button>
                 <span class="form-note">
-                  <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                  <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-lock"></use></svg>
                   Adatait biztonságosan kezeljük
                 </span>
               </div>
@@ -179,7 +198,7 @@
           <!-- SIDEBAR -->
           <aside class="subpage-sidebar" aria-label="Elérhetőség">
 
-            <div class="form-info-card fade-up fade-up-d1">
+            <div class="form-info-card reveal" style="--d:1">
               <h4>Hogyan működik?</h4>
               <div class="form-info-step">
                 <div class="form-step-num" aria-hidden="true">1</div>
@@ -205,39 +224,39 @@
             </div>
 
             <!-- Direct contact -->
-            <div class="sidebar-card fade-up fade-up-d2">
+            <div class="sidebar-card reveal" style="--d:2">
               <h4>Közvetlen elérhetőség</h4>
               <div class="sidebar-contact-row">
-                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-user"></use></svg>
                 <span>Szabó Balázs Márton</span>
               </div>
               <div class="sidebar-contact-row">
-                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg>
                 <a href="tel:+36303603390">+36 30 360 3390</a>
               </div>
               <div class="sidebar-contact-row">
-                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-mail"></use></svg>
                 <a href="mailto:hello@abna.hu">hello@abna.hu</a>
               </div>
               <div class="sidebar-contact-row">
-                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                <span>Ady Endre u. 29, 2890 Tata</span>
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-map-pin"></use></svg>
+                <span>Ady Endre utca 29., 2890 Tata</span>
               </div>
             </div>
 
             <!-- Specific forms -->
-            <div class="sidebar-card fade-up fade-up-d3">
+            <div class="sidebar-card reveal" style="--d:3">
               <h4>Részletes igényfelmérők</h4>
               <div class="sidebar-contact-row">
-                <i class="fa-solid fa-building" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-house"></use></svg>
                 <a href="felmero-lakas.html">Lakásbiztosítás felmérő</a>
               </div>
               <div class="sidebar-contact-row">
-                <i class="fa-solid fa-car" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-car"></use></svg>
                 <a href="felmero-kgfb.html">KGFB felmérő</a>
               </div>
               <div class="sidebar-contact-row">
-                <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-heart-pulse"></use></svg>
                 <a href="felmero-elet.html">Életbiztosítás felmérő</a>
               </div>
             </div>
@@ -249,66 +268,56 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="index.html" class="navbar-logo" aria-label="ABNA főoldal">
-            <div class="logo-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="logo-text">
-              <span class="logo-name">ABNA</span>
-              <span class="logo-sub">Biztosítási Tanácsadás</span>
-            </div>
-          </a>
-          <p class="footer-tagline">A Biztosítás Nem Alszik! – Tapasztalt biztosítási tanácsadással a megbízható védelemért.</p>
+          <a href="index.html" class="logo" aria-label="ABNA – főoldal">
+        <span class="logo-mark" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-shield-check"></use></svg></span>
+        <span class="logo-text">
+          <span class="logo-name">ABNA</span>
+          <span class="logo-sub">A Biztosítás Nem Alszik</span>
+        </span>
+      </a>
+          <p class="footer-tagline">Személyes biztosítási tanácsadás Tatán és környékén – lakás, gépjármű, élet és baleset.</p>
         </div>
+
         <div class="footer-col">
-          <h4>Navigáció</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="index.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Főoldal</a></li>
-            <li><a href="lakas.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Lakásbiztosítás</a></li>
-            <li><a href="kgfb.html"  class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>KGFB</a></li>
-            <li><a href="elet.html"  class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Élet &amp; Baleset</a></li>
+          <h2 class="footer-title">Biztosítások</h2>
+          <ul class="footer-links">
+            <li><a href="lakas.html">Lakásbiztosítás</a></li>
+            <li><a href="kgfb.html">KGFB és casco</a></li>
+            <li><a href="elet.html">Élet- és balesetbiztosítás</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Igényfelmérők</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="felmero-lakas.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Lakásbiztosítás felmérő</a></li>
-            <li><a href="felmero-kgfb.html"  class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>KGFB felmérő</a></li>
-            <li><a href="felmero-elet.html"  class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Életbiztosítás felmérő</a></li>
-            <li><a href="felmero.html"        class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Általános kapcsolatfelvétel</a></li>
+          <h2 class="footer-title">Ajánlatkérés</h2>
+          <ul class="footer-links">
+            <li><a href="felmero-lakas.html">Lakásbiztosítás felmérő</a></li>
+            <li><a href="felmero-kgfb.html">KGFB felmérő</a></li>
+            <li><a href="felmero-elet.html">Életbiztosítás felmérő</a></li>
+            <li><a href="felmero.html">Általános kapcsolatfelvétel</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Elérhetőség</h4>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            <span>Ady Endre Utca 29<br>2890 Tata</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-phone" aria-hidden="true"></i>
-            <a href="tel:+36303603390">+36 30 360 3390</a>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-            <a href="mailto:hello@abna.hu">hello@abna.hu</a>
-          </div>
+          <h2 class="footer-title">Elérhetőség</h2>
+          <address class="footer-contact">
+            <a href="tel:+36303603390"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg>+36 30 360 3390</a>
+            <a href="mailto:hello@abna.hu"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-mail"></use></svg>hello@abna.hu</a>
+            <span><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-map-pin"></use></svg>Ady Endre utca 29.<br>2890 Tata</span>
+          </address>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p class="footer-copy">&copy; <span id="year"></span> ABNA – A Biztosítás Nem Alszik! Minden jog fenntartva.</p>
-        <div class="footer-bottom-links">
-          <a href="#" class="footer-bottom-link">Adatvédelmi tájékoztató</a>
-          <a href="#" class="footer-bottom-link">ÁSZF</a>
-        </div>
+        <p>&copy; <span data-year>2026</span> ABNA – A Biztosítás Nem Alszik!</p>
+        <a href="adatvedelem.html">Adatvédelmi tájékoztató és impresszum</a>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -2,169 +2,170 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>A Biztosítás Nem Alszik! – Biztosítási Tanácsadás | Tata</title>
   <meta name="description" content="Személyre szabott biztosítási tanácsadás Tatán. Lakásbiztosítás, KGFB, élet- és balesetbiztosítás. Hívjon most: +36 30 360 3390" />
-  <meta name="keywords" content="biztosítás, tanácsadás, lakásbiztosítás, KGFB, életbiztosítás, Tata, Szabó Balázs Márton" />
   <link rel="canonical" href="https://abna.hu/" />
+  <meta name="theme-color" content="#0b1a3f" />
 
-  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ABNA – A Biztosítás Nem Alszik!" />
+  <meta property="og:locale" content="hu_HU" />
+  <meta property="og:url" content="https://abna.hu/" />
   <meta property="og:title" content="A Biztosítás Nem Alszik! – Biztosítási Tanácsadás" />
   <meta property="og:description" content="Személyre szabott biztosítási tanácsadás Tatán. Lakás, KGFB, élet- és balesetbiztosítás." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://abna.hu/" />
-  <meta property="og:locale" content="hu_HU" />
+  <meta property="og:image" content="https://abna.hu/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <!-- Stylesheet -->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+  <link rel="preload" href="fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    "name": "ABNA – A Biztosítás Nem Alszik!",
+    "url": "https://abna.hu/",
+    "image": "https://abna.hu/img/og-image.jpg",
+    "telephone": "+36303603390",
+    "email": "hello@abna.hu",
+    "founder": { "@type": "Person", "name": "Szabó Balázs Márton" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ady Endre utca 29.",
+      "postalCode": "2890",
+      "addressLocality": "Tata",
+      "addressCountry": "HU"
+    },
+    "areaServed": "Tata és környéke"
+  }
+  </script>
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVBAR
-       ============================================================ -->
-  <nav class="navbar" role="navigation" aria-label="Főnavigáció">
-    <div class="navbar-inner">
+  <a class="skip-link" href="#main-content">Ugrás a tartalomra</a>
 
-      <!-- Logo -->
-      <a href="index.html" class="navbar-logo" aria-label="ABNA főoldal">
-        <div class="logo-icon" aria-hidden="true">
-          <i class="fa-solid fa-shield-halved"></i>
-        </div>
-        <div class="logo-text">
+  <header class="navbar" data-navbar>
+    <nav class="navbar-inner" aria-label="Főnavigáció">
+      <a href="index.html" class="logo" aria-label="ABNA – főoldal">
+        <span class="logo-mark" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-shield-check"></use></svg></span>
+        <span class="logo-text">
           <span class="logo-name">ABNA</span>
-          <span class="logo-sub">Biztosítási Tanácsadás</span>
-        </div>
+          <span class="logo-sub">A Biztosítás Nem Alszik</span>
+        </span>
       </a>
 
-      <!-- Desktop menu -->
-      <ul class="navbar-menu" role="list">
-        <li><a href="index.html"  class="navbar-link active">Főoldal</a></li>
-        <li><a href="lakas.html"  class="navbar-link">Lakás</a></li>
-        <li><a href="kgfb.html"   class="navbar-link">KGFB</a></li>
-        <li><a href="elet.html"   class="navbar-link">Élet</a></li>
-        <li><a href="tel:+36303603390" class="navbar-cta">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i>&nbsp; +36 30 360 3390
-        </a></li>
+      <ul class="nav-links">
+          <li><a href="lakas.html" class="nav-link">Lakás</a></li>
+          <li><a href="kgfb.html" class="nav-link">KGFB</a></li>
+          <li><a href="elet.html" class="nav-link">Élet és baleset</a></li>
+          <li><a href="index.html#rolunk" class="nav-link">Rólunk</a></li>
+          <li><a href="felmero.html" class="nav-link">Kapcsolat</a></li>
       </ul>
 
-      <!-- Mobile toggle -->
-      <button class="navbar-toggle" aria-label="Menü megnyitása" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <a href="tel:+36303603390" class="nav-cta"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg><span>+36 30 360 3390</span></a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü megnyitása">
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
       </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="lakas.html" class="mobile-link"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-house"></use></svg><span>Lakásbiztosítás</span></a>
+      <a href="kgfb.html" class="mobile-link"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-car"></use></svg><span>KGFB és casco</span></a>
+      <a href="elet.html" class="mobile-link"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-heart-pulse"></use></svg><span>Élet- és balesetbiztosítás</span></a>
+      <a href="index.html#rolunk" class="mobile-link"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-user"></use></svg><span>Rólunk</span></a>
+      <a href="felmero.html" class="mobile-link"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-mail"></use></svg><span>Kapcsolat és ajánlatkérés</span></a>
+      <a href="tel:+36303603390" class="btn btn-primary btn-block"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg>Hívás: +36 30 360 3390</a>
     </div>
-  </nav>
-
-  <!-- Mobile menu -->
-  <div class="navbar-mobile" role="dialog" aria-label="Mobil navigáció">
-    <a href="index.html"  class="navbar-mobile-link active"><i class="fa-solid fa-house"></i>Főoldal</a>
-    <a href="lakas.html"  class="navbar-mobile-link"><i class="fa-solid fa-building"></i>Lakásbiztosítás</a>
-    <a href="kgfb.html"   class="navbar-mobile-link"><i class="fa-solid fa-car"></i>KGFB</a>
-    <a href="elet.html"   class="navbar-mobile-link"><i class="fa-solid fa-heart-pulse"></i>Élet- és Balesetbiztosítás</a>
-    <a href="tel:+36303603390" class="navbar-cta">
-      <i class="fa-solid fa-phone"></i>&nbsp; +36 30 360 3390
-    </a>
-  </div>
-
+  </header>
 
   <main id="main-content">
 
-    <!-- ============================================================
-         HERO
-         ============================================================ -->
-    <section class="hero" aria-label="Bemutatkozás">
-      <div class="hero-inner container">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-beam" aria-hidden="true"></div>
+      <div class="container hero-inner">
 
-        <!-- Left: content -->
         <div class="hero-content">
-          <div class="hero-badge">
-            <span class="badge badge-white">
-              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-              Megbízható Biztosítási Tanácsadó · Tata
-            </span>
-          </div>
-
-          <h1 class="hero-title">
-            A Biztosítás<br>
-            <span class="highlight">Nem Alszik!</span>
+          <h1 class="hero-title" id="hero-title">
+            <span class="line"><span>A Biztosítás</span></span>
+            <span class="line"><span class="highlight">Nem Alszik!</span></span>
           </h1>
 
           <p class="hero-lead">
-            Fedezze fel a legjobb biztosítási megoldásokat! Személyre szabott
-            tanácsadással segítünk megtalálni az Ön igényeinek és céljainak
-            tökéletesen megfelelő biztosítást.
+            Személyre szabott biztosítási tanácsadás Tatán és környékén.
+            Segítünk megtalálni az Ön igényeinek és céljainak tökéletesen
+            megfelelő lakás-, gépjármű-, élet- és balesetbiztosítást.
           </p>
 
-          <div class="hero-actions">
-            <a href="lakas.html" class="btn btn-primary btn-lg">
-              <i class="fa-solid fa-calculator" aria-hidden="true"></i>
-              Kalkulációt kérek
-            </a>
-            <a href="tel:+36303603390" class="btn btn-secondary btn-lg">
-              <i class="fa-solid fa-phone" aria-hidden="true"></i>
-              Hívjon most
+          <div class="hero-quote" role="group" aria-labelledby="hero-quote-label">
+            <p class="hero-quote-label" id="hero-quote-label">Ingyenes ajánlatot kérek:</p>
+            <div class="hero-quote-options">
+              <a href="felmero-lakas.html" class="quote-chip">
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-house"></use></svg>
+                Lakásra
+              </a>
+              <a href="felmero-kgfb.html" class="quote-chip">
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-car"></use></svg>
+                Autóra
+              </a>
+              <a href="felmero-elet.html" class="quote-chip">
+                <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-heart-pulse"></use></svg>
+                Életre, balesetre
+              </a>
+            </div>
+            <a href="tel:+36303603390" class="hero-call">
+              <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg>
+              vagy hívjon most: <strong>+36 30 360 3390</strong>
             </a>
           </div>
 
-          <!-- Trust indicators -->
-          <div class="hero-trust">
-            <div class="hero-trust-item">
-              <span class="hero-trust-num">500<span style="font-size:1.5rem">+</span></span>
-              <span class="hero-trust-lbl">Elégedett ügyfél</span>
+          <dl class="hero-facts">
+            <div class="hero-fact">
+              <dt>Elégedett ügyfél</dt>
+              <dd><span data-count="500">500</span>+</dd>
             </div>
-            <div class="hero-trust-sep" aria-hidden="true"></div>
-            <div class="hero-trust-item">
-              <span class="hero-trust-num">10<span style="font-size:1.5rem">+</span></span>
-              <span class="hero-trust-lbl">Év tapasztalat</span>
+            <div class="hero-fact">
+              <dt>Év tapasztalat</dt>
+              <dd><span data-count="10">10</span>+</dd>
             </div>
-            <div class="hero-trust-sep" aria-hidden="true"></div>
-            <div class="hero-trust-item">
-              <span class="hero-trust-num">3</span>
-              <span class="hero-trust-lbl">Biztosítási szakterület</span>
+            <div class="hero-fact">
+              <dt>alatt visszajelzünk</dt>
+              <dd><span data-count="24">24</span>&nbsp;óra</dd>
             </div>
-          </div>
+          </dl>
         </div>
 
-        <!-- Right: photo + floating cards -->
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-img-wrap">
-            <div class="hero-img-glow"></div>
+        <div class="hero-visual">
+          <figure class="portrait hero-portrait">
             <img
-              src="https://abna.hu/images/976/22377047/ujkep-4770-QtgUtiBm4KMAwpKV63KZzQ.jpg"
-              alt="Szabó Balázs Márton – Biztosítási Tanácsadó"
-              class="hero-img"
-              loading="eager"
+              src="img/szabo-balazs-marton.jpg"
+              data-fallback="https://abna.hu/images/976/22377047/ujkep-4770-QtgUtiBm4KMAwpKV63KZzQ.jpg"
+              onerror="this.onerror=function(){this.parentNode.classList.add('is-missing')};this.src=this.dataset.fallback"
+              alt="Szabó Balázs Márton biztosítási tanácsadó portréja"
+              width="880" height="1100"
+              fetchpriority="high"
             />
+            <span class="portrait-fallback" aria-hidden="true">SzBM</span>
+            <figcaption class="portrait-caption">
+              <strong>Szabó Balázs Márton</strong>
+              <span>biztosítási tanácsadó, Tata</span>
+            </figcaption>
+          </figure>
 
-            <!-- Floating card – top right -->
-            <div class="hero-float hero-float-tl">
-              <div class="hero-float-icon">
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="hero-float-text">
-                <strong>Kiváló minősítés</strong>
-                <span>5 csillagos értékelések</span>
-              </div>
-            </div>
-
-            <!-- Floating card – bottom left -->
-            <div class="hero-float hero-float-bl">
-              <div class="hero-float-icon">
-                <i class="fa-solid fa-handshake"></i>
-              </div>
-              <div class="hero-float-text">
-                <strong>Ingyenes tanácsadás</strong>
-                <span>Kötelezettség nélkül</span>
-              </div>
-            </div>
+          <div class="hero-note hero-note-top" aria-hidden="true">
+            <span class="hero-note-icon"><svg class="icon"><use href="img/icons.svg#i-star"></use></svg></span>
+            <span><strong>Kiváló minősítés</strong>5 csillagos értékelések</span>
+          </div>
+          <div class="hero-note hero-note-bottom" aria-hidden="true">
+            <span class="hero-note-icon"><svg class="icon"><use href="img/icons.svg#i-handshake"></use></svg></span>
+            <span><strong>Ingyenes tanácsadás</strong>Kötelezettség nélkül</span>
           </div>
         </div>
 
@@ -172,80 +173,63 @@
     </section>
 
 
-    <!-- ============================================================
-         SERVICES
-         ============================================================ -->
+    <!-- SERVICES -->
     <section class="section section-alt" id="szolgaltatasok" aria-labelledby="services-heading">
       <div class="container">
 
-        <div class="section-header fade-up">
-          <span class="badge badge-blue">
-            <i class="fa-solid fa-list-check" aria-hidden="true"></i>
-            Szolgáltatások
-          </span>
+        <header class="section-header reveal">
           <h2 id="services-heading">Amiben számíthat ránk</h2>
-          <div class="divider" aria-hidden="true"></div>
-          <p>Tapasztalt tanácsadóként háromféle biztosítási területen nyújtunk személyre szabott megoldásokat.</p>
-        </div>
+          <p>Tapasztalt tanácsadóként három biztosítási területen nyújtunk személyre szabott megoldásokat.</p>
+        </header>
 
         <div class="services-grid">
 
-          <!-- Lakás -->
-          <article class="service-card fade-up fade-up-d1">
-            <div class="service-icon" aria-hidden="true">🏠</div>
-            <h3>Lakásbiztosítás</h3>
+          <article class="service-card reveal" style="--d:0">
+            <div class="service-icon" aria-hidden="true"><svg class="icon"><use href="img/icons.svg#i-house"></use></svg></div>
+            <h3><a href="lakas.html" class="service-link">Lakásbiztosítás</a></h3>
             <p>
               Védje meg otthonát és értékeit a váratlan eseményekkel szemben!
               Személyre szabott ajánlattal gondoskodunk tűz-, víz- és betörés elleni
               védelemről egyaránt.
             </p>
+            <ul class="service-tags" aria-label="Főbb fedezetek">
+              <li>Tűz</li><li>Vízkár</li><li>Betörés</li><li>Vihar</li>
+            </ul>
             <div class="service-card-footer">
-              <a href="lakas.html" class="btn btn-outline btn-sm">
-                Tovább
-                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </a>
-              <a href="felmero-lakas.html" class="btn btn-primary btn-sm">
-                Kalkulálok
-              </a>
+              <span class="service-more">Részletek <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-arrow-right"></use></svg></span>
+              <a href="felmero-lakas.html" class="btn btn-primary btn-sm">Ajánlatot kérek</a>
             </div>
           </article>
 
-          <!-- KGFB -->
-          <article class="service-card fade-up fade-up-d2">
-            <div class="service-icon" aria-hidden="true">🚗</div>
-            <h3>Kötelező Gépjármű (KGFB)</h3>
+          <article class="service-card reveal" style="--d:1">
+            <div class="service-icon" aria-hidden="true"><svg class="icon"><use href="img/icons.svg#i-car"></use></svg></div>
+            <h3><a href="kgfb.html" class="service-link">KGFB és casco</a></h3>
             <p>
-              Hozza ki a maximális védelmet gépjárművéből! Kötelező felelős­ség­biztosítás
+              Hozza ki a maximális védelmet gépjárművéből! Kötelező felelősség&shy;biztosítás
               és casco ajánlatok, amelyek Önre és értékeire vannak szabva.
             </p>
+            <ul class="service-tags" aria-label="Főbb fedezetek">
+              <li>Kötelező</li><li>Casco</li><li>Assistance</li>
+            </ul>
             <div class="service-card-footer">
-              <a href="kgfb.html" class="btn btn-outline btn-sm">
-                Tovább
-                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </a>
-              <a href="felmero-kgfb.html" class="btn btn-primary btn-sm">
-                Kalkulálok
-              </a>
+              <span class="service-more">Részletek <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-arrow-right"></use></svg></span>
+              <a href="felmero-kgfb.html" class="btn btn-primary btn-sm">Ajánlatot kérek</a>
             </div>
           </article>
 
-          <!-- Élet -->
-          <article class="service-card fade-up fade-up-d3">
-            <div class="service-icon" aria-hidden="true">❤️</div>
-            <h3>Élet- és Balesetbiztosítás</h3>
+          <article class="service-card reveal" style="--d:2">
+            <div class="service-icon" aria-hidden="true"><svg class="icon"><use href="img/icons.svg#i-heart-pulse"></use></svg></div>
+            <h3><a href="elet.html" class="service-link">Élet- és balesetbiztosítás</a></h3>
             <p>
-              Fedezze fel a baleset- és életbiztosítások világát! Tapasztalt
-              tanácsadóink segítségével megtalálhatja az Ön igényeihez legjobban
-              illeszkedő megoldásokat.
+              Fedezze fel a baleset- és életbiztosítások világát! Segítünk megtalálni
+              az Ön igényeihez és családjához legjobban illeszkedő megoldást.
             </p>
+            <ul class="service-tags" aria-label="Főbb fedezetek">
+              <li>Haláleset</li><li>Baleset</li><li>Kórházi napi térítés</li>
+            </ul>
             <div class="service-card-footer">
-              <a href="elet.html" class="btn btn-outline btn-sm">
-                Tovább
-                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </a>
-              <a href="felmero-elet.html" class="btn btn-primary btn-sm">
-                Kalkulálok
-              </a>
+              <span class="service-more">Részletek <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-arrow-right"></use></svg></span>
+              <a href="felmero-elet.html" class="btn btn-primary btn-sm">Ajánlatot kérek</a>
             </div>
           </article>
 
@@ -254,401 +238,245 @@
     </section>
 
 
-    <!-- ============================================================
-         ABOUT
-         ============================================================ -->
-    <section class="section section-white" id="rolunk" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="about-inner">
+    <!-- ABOUT -->
+    <section class="section" id="rolunk" aria-labelledby="about-heading">
+      <div class="container about-inner">
 
-          <!-- Content -->
-          <div class="about-content">
-            <span class="badge badge-blue fade-up">
-              <i class="fa-solid fa-user-tie" aria-hidden="true"></i>
-              Rólunk
-            </span>
-            <h2 id="about-heading" class="fade-up fade-up-d1">
-              Szabó Balázs Márton<br>az Ön Biztosítási Tanácsadója
-            </h2>
-            <p class="fade-up fade-up-d2">
-              Egy neves nemzetközi biztosítóval együttműködő, tapasztalt tanácsadóként
-              segítjük ügyfeleinket abban, hogy megtalálják a legjobb biztosítási
-              lehetőségeket. Velünk biztosan védve tudhatja Családját és Értékeit!
-            </p>
-
-            <div class="about-features fade-up fade-up-d3">
-              <div class="about-feat">
-                <div class="about-feat-icon" aria-hidden="true">
-                  <i class="fa-solid fa-check"></i>
-                </div>
-                <div class="about-feat-body">
-                  <strong>Személyre szabott ajánlatok</strong>
-                  <span>Minden ügyfél egyedi igényeit figyelembe veszem</span>
-                </div>
-              </div>
-              <div class="about-feat">
-                <div class="about-feat-icon" aria-hidden="true">
-                  <i class="fa-solid fa-clock"></i>
-                </div>
-                <div class="about-feat-body">
-                  <strong>Gyors kiszolgálás</strong>
-                  <span>Általában 24 órán belül visszajelzünk</span>
-                </div>
-              </div>
-              <div class="about-feat">
-                <div class="about-feat-icon" aria-hidden="true">
-                  <i class="fa-solid fa-headset"></i>
-                </div>
-                <div class="about-feat-body">
-                  <strong>Folyamatos elérhetőség</strong>
-                  <span>Telefonon és e-mailben is elérhetők vagyunk</span>
-                </div>
-              </div>
-              <div class="about-feat">
-                <div class="about-feat-icon" aria-hidden="true">
-                  <i class="fa-solid fa-award"></i>
-                </div>
-                <div class="about-feat-body">
-                  <strong>Elismert szakértelem</strong>
-                  <span>Magasan képzett, folyamatosan fejlődő tanácsadó</span>
-                </div>
-              </div>
-            </div>
-
-            <a href="tel:+36303603390" class="btn btn-primary fade-up fade-up-d4">
-              <i class="fa-solid fa-phone" aria-hidden="true"></i>
-              Ingyenes konzultáció
-            </a>
-          </div>
-
-          <!-- Photo -->
-          <div class="about-visual fade-up fade-up-d2" aria-hidden="true">
+        <div class="about-visual reveal">
+          <figure class="portrait about-portrait">
             <img
-              src="https://abna.hu/images/976/22377047/ujkep-4770-QtgUtiBm4KMAwpKV63KZzQ.jpg"
-              alt="Szabó Balázs Márton – Biztosítási Tanácsadó"
-              class="about-photo"
+              src="img/szabo-balazs-marton.jpg"
+              data-fallback="https://abna.hu/images/976/22377047/ujkep-4770-QtgUtiBm4KMAwpKV63KZzQ.jpg"
+              onerror="this.onerror=function(){this.parentNode.classList.add('is-missing')};this.src=this.dataset.fallback"
+              alt=""
+              width="880" height="1100"
               loading="lazy"
             />
-            <div class="about-float-badge">
-              <span class="num">500+</span>
-              <span class="lbl">Elégedett ügyfél</span>
-            </div>
-          </div>
-
+            <span class="portrait-fallback" aria-hidden="true">SzBM</span>
+          </figure>
+          <a class="about-place" href="https://www.google.com/maps/search/?api=1&amp;query=Tata%2C+Ady+Endre+utca+29" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-map-pin"></use></svg>
+            <span><strong>Személyesen is</strong>Tata, Ady Endre utca 29.</span>
+          </a>
         </div>
+
+        <div class="about-content">
+          <h2 id="about-heading" class="reveal">
+            Szabó Balázs Márton, az Ön biztosítási tanácsadója
+          </h2>
+          <p class="about-lead reveal">
+            Egy neves nemzetközi biztosítóval együttműködő, tapasztalt tanácsadóként
+            segítjük ügyfeleinket abban, hogy megtalálják a legjobb biztosítási
+            lehetőségeket. Velünk biztosan védve tudhatja családját és értékeit!
+          </p>
+
+          <ul class="about-features">
+            <li class="about-feat reveal" style="--d:0">
+              <span class="about-feat-icon" aria-hidden="true"><svg class="icon"><use href="img/icons.svg#i-user-round-check"></use></svg></span>
+              <span><strong>Személyre szabott ajánlatok</strong>Minden ügyfél egyedi igényeit figyelembe veszem.</span>
+            </li>
+            <li class="about-feat reveal" style="--d:1">
+              <span class="about-feat-icon" aria-hidden="true"><svg class="icon"><use href="img/icons.svg#i-clock"></use></svg></span>
+              <span><strong>Gyors kiszolgálás</strong>Általában 24 órán belül visszajelzünk.</span>
+            </li>
+            <li class="about-feat reveal" style="--d:2">
+              <span class="about-feat-icon" aria-hidden="true"><svg class="icon"><use href="img/icons.svg#i-headset"></use></svg></span>
+              <span><strong>Folyamatos elérhetőség</strong>Telefonon, e-mailben és személyesen is.</span>
+            </li>
+            <li class="about-feat reveal" style="--d:3">
+              <span class="about-feat-icon" aria-hidden="true"><svg class="icon"><use href="img/icons.svg#i-award"></use></svg></span>
+              <span><strong>Elismert szakértelem</strong>Magasan képzett, folyamatosan fejlődő tanácsadó.</span>
+            </li>
+          </ul>
+
+          <a href="tel:+36303603390" class="btn btn-primary reveal">
+            <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg>
+            Ingyenes konzultáció
+          </a>
+        </div>
+
       </div>
     </section>
 
 
-    <!-- ============================================================
-         STATS
-         ============================================================ -->
-    <section class="stats" aria-label="Statisztikák">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item fade-up">
-            <span class="stat-num" data-target="500" data-suffix="+">0+</span>
-            <span class="stat-lbl">Elégedett ügyfél</span>
-          </div>
-          <div class="stat-item fade-up fade-up-d1">
-            <span class="stat-num" data-target="10" data-suffix="+">0+</span>
-            <span class="stat-lbl">Év tapasztalat</span>
-          </div>
-          <div class="stat-item fade-up fade-up-d2">
-            <span class="stat-num" data-target="3" data-suffix="">0</span>
-            <span class="stat-lbl">Biztosítási szakterület</span>
-          </div>
-          <div class="stat-item fade-up fade-up-d3">
-            <span class="stat-num" data-target="24" data-suffix="h">0h</span>
-            <span class="stat-lbl">Válaszidő</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-         VALUES
-         ============================================================ -->
+    <!-- VALUES -->
     <section class="section section-alt" aria-labelledby="values-heading">
       <div class="container">
 
-        <div class="section-header fade-up">
-          <span class="badge badge-blue">
-            <i class="fa-solid fa-gem" aria-hidden="true"></i>
-            Értékeink
-          </span>
+        <header class="section-header reveal">
           <h2 id="values-heading">Miért válasszon minket?</h2>
-          <div class="divider" aria-hidden="true"></div>
           <p>Ügyfeleink bizalma a legfontosabb számunkra. Ezekre az alapelvekre építjük mindennapjainkat.</p>
-        </div>
+        </header>
 
         <div class="values-grid">
-
-          <div class="value-card fade-up fade-up-d1">
-            <div class="value-icon" aria-hidden="true">
-              <i class="fa-solid fa-handshake"></i>
-            </div>
+          <div class="value reveal" style="--d:0">
+            <svg class="icon value-icon" aria-hidden="true"><use href="img/icons.svg#i-handshake"></use></svg>
             <h3>Megbízhatóság</h3>
             <p>
               Számunkra az ügyfél bizalma a legfontosabb. Mindig a legjobb és
-              legtransparensebb megoldást keressük, őszinte tanácsadással.
+              legátláthatóbb megoldást keressük, őszinte tanácsadással.
             </p>
           </div>
-
-          <div class="value-card fade-up fade-up-d2">
-            <div class="value-icon" aria-hidden="true">
-              <i class="fa-solid fa-graduation-cap"></i>
-            </div>
+          <div class="value reveal" style="--d:1">
+            <svg class="icon value-icon" aria-hidden="true"><use href="img/icons.svg#i-graduation-cap"></use></svg>
             <h3>Szakértelem</h3>
             <p>
               Magasan képzett tanácsadóként garantáljuk a legjobb biztosítási
               megoldásokat, naprakész piaci ismeretek alapján.
             </p>
           </div>
-
-          <div class="value-card fade-up fade-up-d3">
-            <div class="value-icon" aria-hidden="true">
-              <i class="fa-solid fa-headset"></i>
-            </div>
+          <div class="value reveal" style="--d:2">
+            <svg class="icon value-icon" aria-hidden="true"><use href="img/icons.svg#i-headset"></use></svg>
             <h3>Elérhetőség</h3>
             <p>
-              Bárhol és bármikor elérhet minket. Ügyfeleink mindig a középpontban
-              állnak – telefonon, e-mailben vagy személyesen.
+              Ügyfeleink mindig a középpontban állnak – telefonon, e-mailben
+              vagy személyesen is elérhet minket.
             </p>
           </div>
-
         </div>
+
       </div>
     </section>
 
 
-    <!-- ============================================================
-         TESTIMONIALS
-         ============================================================ -->
-    <section class="section section-white" aria-labelledby="testimonials-heading">
+    <!-- TESTIMONIALS -->
+    <section class="section" aria-labelledby="testimonials-heading">
       <div class="container">
 
-        <div class="section-header fade-up">
-          <span class="badge badge-blue">
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            Ügyfélelégedettség
-          </span>
+        <header class="section-header reveal">
           <h2 id="testimonials-heading">Mit mondanak ügyfeleink?</h2>
-          <div class="divider" aria-hidden="true"></div>
           <p>Ügyfeleink véleménye a legjobb visszajelzés számunkra.</p>
-        </div>
+        </header>
 
         <div class="testimonials-grid">
 
-          <article class="testimonial-card fade-up fade-up-d1">
-            <div class="testimonial-stars" aria-label="5 csillag">
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <figure class="testimonial reveal" style="--d:0">
+            <div class="testimonial-stars" role="img" aria-label="5 csillagból 5">
+              <svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg>
             </div>
             <blockquote class="testimonial-quote">
-              „Nagyszerű szolgáltatás! Mindig számíthatok rájuk, amikor szükség úgy hozza. Nagyon profik és barátságosak."
+              <p>„Nagyszerű szolgáltatás! Mindig számíthatok rájuk, amikor a szükség úgy hozza. Nagyon profik és barátságosak.”</p>
             </blockquote>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar" aria-hidden="true">T</div>
-              <div>
-                <div class="testimonial-name">Sz. Tímea</div>
-                <div class="testimonial-role">Lakásbiztosítás ügyfél</div>
-              </div>
-            </div>
-          </article>
+            <figcaption class="testimonial-author">
+              <span class="testimonial-avatar" aria-hidden="true">T</span>
+              <span><strong>Sz. Tímea</strong>Lakásbiztosítás</span>
+            </figcaption>
+          </figure>
 
-          <article class="testimonial-card fade-up fade-up-d2">
-            <div class="testimonial-stars" aria-label="5 csillag">
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <figure class="testimonial reveal" style="--d:1">
+            <div class="testimonial-stars" role="img" aria-label="5 csillagból 5">
+              <svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg>
             </div>
             <blockquote class="testimonial-quote">
-              „Szuper csapat! A biztosítást most már nem csak költségnek, hanem befektetésnek érzem. Örülök hogy rájuk találtam."
+              <p>„Szuper csapat! A biztosítást most már nem csak költségnek, hanem befektetésnek érzem. Örülök, hogy rájuk találtam.”</p>
             </blockquote>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar" aria-hidden="true">J</div>
-              <div>
-                <div class="testimonial-name">M. József</div>
-                <div class="testimonial-role">Életbiztosítás ügyfél</div>
-              </div>
-            </div>
-          </article>
+            <figcaption class="testimonial-author">
+              <span class="testimonial-avatar" aria-hidden="true">J</span>
+              <span><strong>M. József</strong>Életbiztosítás</span>
+            </figcaption>
+          </figure>
 
-          <article class="testimonial-card fade-up fade-up-d3">
-            <div class="testimonial-stars" aria-label="5 csillag">
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <figure class="testimonial reveal" style="--d:2">
+            <div class="testimonial-stars" role="img" aria-label="5 csillagból 5">
+              <svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg><svg class="icon"><use href="img/icons.svg#i-star"></use></svg>
             </div>
             <blockquote class="testimonial-quote">
-              „Kiváló tanácsadás! Szakmailag felkészült csapat, csak ajánlani tudom mindenkinek. Gyors, precíz, megbízható."
+              <p>„Kiváló tanácsadás! Szakmailag felkészült csapat, csak ajánlani tudom mindenkinek. Gyors, precíz, megbízható.”</p>
             </blockquote>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar" aria-hidden="true">P</div>
-              <div>
-                <div class="testimonial-name">G. Péter</div>
-                <div class="testimonial-role">KGFB ügyfél</div>
-              </div>
-            </div>
-          </article>
+            <figcaption class="testimonial-author">
+              <span class="testimonial-avatar" aria-hidden="true">P</span>
+              <span><strong>G. Péter</strong>KGFB</span>
+            </figcaption>
+          </figure>
 
         </div>
       </div>
     </section>
 
 
-    <!-- ============================================================
-         CTA / CONTACT
-         ============================================================ -->
+    <!-- CONTACT -->
     <section class="cta-section" id="kapcsolat" aria-labelledby="cta-heading">
-      <div class="container">
-        <div class="cta-inner">
+      <div class="hero-beam" aria-hidden="true"></div>
+      <div class="container cta-inner">
 
-          <span class="badge badge-white fade-up">
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-            Kapcsolat
-          </span>
+        <h2 id="cta-heading" class="reveal"><span class="line">Bízzon a szakértelemben!</span> <span class="line">Lépjen kapcsolatba még ma!</span></h2>
+        <p class="reveal">
+          Gyors, korrekt, barátságos kiszolgálás. Ingyenes konzultáció kötelezettség nélkül –
+          segítünk megtalálni az Önnek legjobb megoldást.
+        </p>
 
-          <h2 id="cta-heading" class="fade-up fade-up-d1">
-            Bízzon a szakértelemben!<br>Lépjen kapcsolatba ma!
-          </h2>
-          <p class="fade-up fade-up-d2">
-            Gyors, korrekt, barátságos kiszolgálás. Ingyenes konzultáció kötelezettség nélkül –
-            segítünk megtalálni az Önnek legjobb megoldást.
-          </p>
-
-          <div class="cta-buttons fade-up fade-up-d3">
-            <a href="felmero.html" class="btn btn-white btn-lg">
-              <i class="fa-solid fa-file-pen" aria-hidden="true"></i>
-              Igényfelmérőt kitöltök
-            </a>
-            <a href="tel:+36303603390" class="btn btn-secondary btn-lg">
-              <i class="fa-solid fa-phone" aria-hidden="true"></i>
-              Hívjon most
-            </a>
-          </div>
-
-          <div class="cta-contacts fade-up fade-up-d4">
-            <a href="tel:+36303603390" class="cta-contact-item">
-              <span class="cta-contact-icon" aria-hidden="true">
-                <i class="fa-solid fa-phone"></i>
-              </span>
-              +36 30 360 3390
-            </a>
-            <a href="mailto:hello@abna.hu" class="cta-contact-item">
-              <span class="cta-contact-icon" aria-hidden="true">
-                <i class="fa-solid fa-envelope"></i>
-              </span>
-              hello@abna.hu
-            </a>
-            <span class="cta-contact-item">
-              <span class="cta-contact-icon" aria-hidden="true">
-                <i class="fa-solid fa-location-dot"></i>
-              </span>
-              Ady Endre Utca 29, Tata
-            </span>
-          </div>
-
+        <div class="cta-buttons reveal">
+          <a href="felmero.html" class="btn btn-white btn-lg">
+            <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-file-pen-line"></use></svg>
+            Igényfelmérőt kitöltök
+          </a>
+          <a href="tel:+36303603390" class="btn btn-secondary btn-lg">
+            <svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg>
+            Hívjon most
+          </a>
         </div>
+
+        <ul class="cta-contacts reveal">
+          <li><a href="tel:+36303603390"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg>+36 30 360 3390</a></li>
+          <li><a href="mailto:hello@abna.hu"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-mail"></use></svg>hello@abna.hu</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Tata%2C+Ady+Endre+utca+29" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-map-pin"></use></svg>Ady Endre utca 29., Tata</a></li>
+        </ul>
+
       </div>
     </section>
 
   </main>
 
-
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
-
       <div class="footer-top">
-
-        <!-- Brand -->
         <div class="footer-brand">
-          <a href="index.html" class="navbar-logo" aria-label="ABNA főoldal">
-            <div class="logo-icon" aria-hidden="true">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <div class="logo-text">
-              <span class="logo-name">ABNA</span>
-              <span class="logo-sub">Biztosítási Tanácsadás</span>
-            </div>
-          </a>
-          <p class="footer-tagline">
-            A Biztosítás Nem Alszik! – Tapasztalt biztosítási tanácsadással
-            a megbízható védelemért.
-          </p>
+          <a href="index.html" class="logo" aria-label="ABNA – főoldal">
+        <span class="logo-mark" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-shield-check"></use></svg></span>
+        <span class="logo-text">
+          <span class="logo-name">ABNA</span>
+          <span class="logo-sub">A Biztosítás Nem Alszik</span>
+        </span>
+      </a>
+          <p class="footer-tagline">Személyes biztosítási tanácsadás Tatán és környékén – lakás, gépjármű, élet és baleset.</p>
         </div>
 
-        <!-- Navigation -->
         <div class="footer-col">
-          <h4>Navigáció</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="index.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Főoldal</a></li>
-            <li><a href="lakas.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Lakásbiztosítás</a></li>
-            <li><a href="kgfb.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>KGFB</a></li>
-            <li><a href="elet.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Élet &amp; Baleset</a></li>
+          <h2 class="footer-title">Biztosítások</h2>
+          <ul class="footer-links">
+            <li><a href="lakas.html">Lakásbiztosítás</a></li>
+            <li><a href="kgfb.html">KGFB és casco</a></li>
+            <li><a href="elet.html">Élet- és balesetbiztosítás</a></li>
           </ul>
         </div>
 
-        <!-- Services -->
         <div class="footer-col">
-          <h4>Szolgáltatások</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="felmero-lakas.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Lakásbiztosítás kalkuláció</a></li>
-            <li><a href="felmero-kgfb.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>KGFB kalkuláció</a></li>
-            <li><a href="felmero-elet.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Életbiztosítás felmérő</a></li>
-            <li><a href="felmero.html" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>Általános igényfelmérő</a></li>
+          <h2 class="footer-title">Ajánlatkérés</h2>
+          <ul class="footer-links">
+            <li><a href="felmero-lakas.html">Lakásbiztosítás felmérő</a></li>
+            <li><a href="felmero-kgfb.html">KGFB felmérő</a></li>
+            <li><a href="felmero-elet.html">Életbiztosítás felmérő</a></li>
+            <li><a href="felmero.html">Általános kapcsolatfelvétel</a></li>
           </ul>
         </div>
 
-        <!-- Contact -->
         <div class="footer-col">
-          <h4>Elérhetőség</h4>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            <span>Ady Endre Utca 29<br>2890 Tata</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-phone" aria-hidden="true"></i>
-            <a href="tel:+36303603390">+36 30 360 3390</a>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-            <a href="mailto:hello@abna.hu">hello@abna.hu</a>
-          </div>
+          <h2 class="footer-title">Elérhetőség</h2>
+          <address class="footer-contact">
+            <a href="tel:+36303603390"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-phone"></use></svg>+36 30 360 3390</a>
+            <a href="mailto:hello@abna.hu"><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-mail"></use></svg>hello@abna.hu</a>
+            <span><svg class="icon" aria-hidden="true"><use href="img/icons.svg#i-map-pin"></use></svg>Ady Endre utca 29.<br>2890 Tata</span>
+          </address>
         </div>
-
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copy">
-          &copy; <span id="year"></span> ABNA – A Biztosítás Nem Alszik! Minden jog fenntartva.
-        </p>
-        <div class="footer-bottom-links">
-          <a href="#" class="footer-bottom-link">Adatvédelmi tájékoztató</a>
-          <a href="#" class="footer-bottom-link">ÁSZF</a>
-        </div>
+        <p>&copy; <span data-year>2026</span> ABNA – A Biztosítás Nem Alszik!</p>
+        <a href="adatvedelem.html">Adatvédelmi tájékoztató és impresszum</a>
       </div>
-
     </div>
   </footer>
 
-
-  <!-- jQuery + main script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
+  <script src="js/main.js" defer></script>
 </body>
 </html>
