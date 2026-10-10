@@ -1,230 +1,292 @@
 /**
  * ABNA – A Biztosítás Nem Alszik!
- * Main JavaScript (jQuery)
+ * Site behaviour, no dependencies.
  */
+(function () {
+  'use strict';
 
-$(function () {
+  var doc = document.documentElement;
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  /* ============================================================
-     NAVBAR – scroll behaviour
-     ============================================================ */
-  var $navbar = $('.navbar');
+  /* ------------------------------------------------------------
+     Footer year
+     ------------------------------------------------------------ */
+  document.querySelectorAll('[data-year]').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
+
+
+  /* ------------------------------------------------------------
+     Navbar: solid background once the page scrolls
+     ------------------------------------------------------------ */
+  var navbar = document.querySelector('[data-navbar]');
 
   function syncNavbar() {
-    if ($(window).scrollTop() > 50) {
-      $navbar.addClass('scrolled');
+    navbar.classList.toggle('is-scrolled', window.scrollY > 24);
+  }
+  if (navbar) {
+    syncNavbar();
+    window.addEventListener('scroll', syncNavbar, { passive: true });
+  }
+
+
+  /* ------------------------------------------------------------
+     Mobile menu
+     ------------------------------------------------------------ */
+  var toggle = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('mobile-menu');
+
+  function setMenu(open) {
+    if (!toggle || !menu) return;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Menü bezárása' : 'Menü megnyitása');
+    navbar.classList.toggle('is-open', open);
+    document.body.classList.toggle('no-scroll', open);
+    if (open) {
+      menu.hidden = false;
+      // Next frame so the opening transition runs from the closed state.
+      requestAnimationFrame(function () { menu.classList.add('is-open'); });
     } else {
-      $navbar.removeClass('scrolled');
+      menu.classList.remove('is-open');
+      menu.hidden = true;
     }
   }
-  syncNavbar();
-  $(window).on('scroll.navbar', syncNavbar);
 
-
-  /* ============================================================
-     NAVBAR – mobile toggle
-     ============================================================ */
-  var $toggle = $('.navbar-toggle');
-  var $mobile = $('.navbar-mobile');
-
-  $toggle.on('click', function () {
-    var isOpen = $toggle.hasClass('open');
-    $toggle.toggleClass('open', !isOpen);
-    $mobile.toggleClass('open', !isOpen);
-    $('body').toggleClass('no-scroll', !isOpen);
-  });
-
-  // Close when any mobile link is tapped
-  $mobile.find('a').on('click', function () {
-    $toggle.removeClass('open');
-    $mobile.removeClass('open');
-    $('body').removeClass('no-scroll');
-  });
-
-  // Close on outside click
-  $(document).on('click', function (e) {
-    if ($mobile.hasClass('open') &&
-        !$(e.target).closest('.navbar-mobile, .navbar-toggle').length) {
-      $toggle.removeClass('open');
-      $mobile.removeClass('open');
-      $('body').removeClass('no-scroll');
-    }
-  });
-
-
-  /* ============================================================
-     SMOOTH SCROLL – internal anchors
-     ============================================================ */
-  $(document).on('click', 'a[href^="#"]', function (e) {
-    var target = $(this).attr('href');
-    if (!target || target === '#' || target.indexOf('#!') === 0) return;
-    var $target = $(target);
-    if (!$target.length) return;
-    e.preventDefault();
-    var navH = parseInt(
-      getComputedStyle(document.documentElement).getPropertyValue('--navbar-h'),
-      10
-    ) || 80;
-    $('html, body').animate(
-      { scrollTop: $target.offset().top - navH - 16 },
-      600
-    );
-  });
-
-
-  /* ============================================================
-     ACTIVE NAV LINK – auto-detect by current page filename
-     ============================================================ */
-  var page = window.location.pathname.replace(/\/$/, '').split('/').pop() || 'index.html';
-  if (page === '') page = 'index.html';
-
-  $('.navbar-link, .navbar-mobile-link').each(function () {
-    var href = ($(this).attr('href') || '').split('/').pop();
-    if (href === page) {
-      $(this).addClass('active');
-    }
-  });
-
-
-  /* ============================================================
-     SCROLL ANIMATIONS – .fade-up elements
-     ============================================================ */
-  function revealFadeUps() {
-    var winBottom = $(window).scrollTop() + $(window).height();
-    $('.fade-up:not(.visible)').each(function () {
-      if ($(this).offset().top < winBottom - 60) {
-        $(this).addClass('visible');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function () {
+      setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setMenu(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setMenu(false);
+        toggle.focus();
       }
     });
+    document.addEventListener('click', function (e) {
+      if (toggle.getAttribute('aria-expanded') === 'true' && !e.target.closest('[data-navbar]')) {
+        setMenu(false);
+      }
+    });
+    window.matchMedia('(min-width: 961px)').addEventListener('change', function (mq) {
+      if (mq.matches) setMenu(false);
+    });
   }
-  revealFadeUps();
-  $(window).on('scroll.anim', revealFadeUps);
 
 
-  /* ============================================================
-     STATS COUNTER ANIMATION
-     ============================================================ */
-  var countersRun = false;
+  /* ------------------------------------------------------------
+     Scroll reveal. Content is visible without JS; the .js class on
+     <html> opts elements into the reveal, and anything already in
+     view when the page loads is shown immediately.
+     ------------------------------------------------------------ */
+  var revealables = document.querySelectorAll('.reveal');
 
-  function tryCounters() {
-    if (countersRun) return;
-    var $stats = $('.stats');
-    if (!$stats.length) return;
+  if ('IntersectionObserver' in window && !reduceMotion.matches) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
 
-    var winBottom = $(window).scrollTop() + $(window).height();
-    if ($stats.offset().top > winBottom - 50) return;
+    revealables.forEach(function (el) { io.observe(el); });
+  } else {
+    revealables.forEach(function (el) { el.classList.add('is-visible'); });
+  }
 
-    countersRun = true;
-    $(window).off('scroll.counters');
+  // Hero entrance runs once the fonts are ready, so lines don't reflow mid-animation.
+  var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+  ready.then(function () { doc.classList.add('is-loaded'); });
+  // Never leave the hero hidden if fonts stall.
+  setTimeout(function () { doc.classList.add('is-loaded'); }, 1500);
 
-    $('.stat-num[data-target]').each(function () {
-      var $el      = $(this);
-      var target   = parseInt($el.data('target'), 10);
-      var suffix   = $el.data('suffix') || '';
-      var duration = 1800;
-      var startTs  = null;
+
+  /* ------------------------------------------------------------
+     Hero numbers count up once, quickly, from a visible default.
+     ------------------------------------------------------------ */
+  var counters = document.querySelectorAll('[data-count]');
+
+  if (counters.length && !reduceMotion.matches) {
+    counters.forEach(function (el) {
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var duration = 1400;
+      var start = null;
+      el.textContent = '0';
 
       function tick(ts) {
-        if (!startTs) startTs = ts;
-        var progress = Math.min((ts - startTs) / duration, 1);
-        // ease-out cubic
-        var eased = 1 - Math.pow(1 - progress, 3);
-        $el.text(Math.floor(eased * target) + suffix);
-        if (progress < 1) requestAnimationFrame(tick);
-        else $el.text(target + suffix);
+        if (start === null) start = ts;
+        var t = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(2, -10 * t); // expo out
+        el.textContent = t < 1 ? Math.round(eased * target) : target;
+        if (t < 1) requestAnimationFrame(tick);
       }
-      requestAnimationFrame(tick);
+      ready.then(function () { setTimeout(function () { requestAnimationFrame(tick); }, 500); });
     });
   }
 
-  tryCounters();
-  $(window).on('scroll.counters', tryCounters);
 
+  /* ------------------------------------------------------------
+     Forms
+     By default a submitted form opens the visitor's mail client with
+     the answers filled in (no backend needed). To receive submissions
+     directly instead, set the form's action to a form-handling
+     endpoint (e.g. Formspree) – it is then sent with fetch().
+     ------------------------------------------------------------ */
+  var MAIL_TO = 'hello@abna.hu';
 
-  /* ============================================================
-     BODY NO-SCROLL helper (used by mobile menu)
-     ============================================================ */
-  $('<style>.no-scroll{overflow:hidden}</style>').appendTo('head');
+  function fieldLabel(field) {
+    var group = field.closest('.form-group');
+    var label = group && group.querySelector('.form-label');
+    return label ? label.textContent.replace('*', '').trim() : field.name;
+  }
 
-
-  /* ============================================================
-     FORM SUBMISSION — mailto fallback (no backend needed)
-     ============================================================
-     To use Formspree instead:
-       1. Sign up free at https://formspree.io
-       2. Create a form and copy your endpoint URL
-       3. Set the <form> action attribute to that URL
-       4. Remove the JS intercept below for that form
-     ============================================================ */
-  $('form.abna-form').on('submit', function (e) {
-    e.preventDefault();
-
-    var $form    = $(this);
-    var $fields  = $form.find('.form-input, .form-select, .form-textarea');
-    var $consent = $form.find('input[name="consent"]');
-    var valid    = true;
-
-    // Basic required-field highlight
-    $fields.each(function () {
-      if ($(this).prop('required') && !$(this).val().trim()) {
-        $(this).css('border-color', '#ef4444');
-        valid = false;
-      } else {
-        $(this).css('border-color', '');
-      }
-    });
-
-    if ($consent.length && !$consent.is(':checked')) {
-      $consent.closest('.form-consent').css('border-color', '#ef4444');
-      valid = false;
-    } else {
-      $consent.closest('.form-consent').css('border-color', '');
+  function errorFor(field) {
+    if (field.validity.valueMissing) {
+      return field.type === 'checkbox'
+        ? 'Az elküldéshez kérjük, fogadja el az adatkezelési tájékoztatót.'
+        : 'Ezt a mezőt kérjük, töltse ki.';
     }
+    if (field.validity.typeMismatch && field.type === 'email') return 'Kérjük, érvényes e-mail címet adjon meg (pl. nev@pelda.hu).';
+    if (field.validity.rangeUnderflow) return 'A legkisebb elfogadott érték: ' + field.min + '.';
+    if (field.validity.rangeOverflow) return 'A legnagyobb elfogadott érték: ' + field.max + '.';
+    if (field.validity.badInput) return 'Kérjük, számot adjon meg.';
+    return '';
+  }
 
-    if (!valid) return;
+  function showError(field, message) {
+    var holder = field.closest('.form-group, .form-consent');
+    var id = (field.id || field.name) + '-error';
+    var el = document.getElementById(id);
+    if (!message) {
+      field.removeAttribute('aria-invalid');
+      if (el) el.remove();
+      if (holder) holder.classList.remove('has-error');
+      return;
+    }
+    field.setAttribute('aria-invalid', 'true');
+    if (holder) holder.classList.add('has-error');
+    if (!el) {
+      el = document.createElement('p');
+      el.className = 'form-error';
+      el.id = id;
+      holder.appendChild(el);
+      var described = (field.getAttribute('aria-describedby') || '').split(' ').filter(Boolean);
+      if (described.indexOf(id) === -1) described.push(id);
+      field.setAttribute('aria-describedby', described.join(' '));
+    }
+    el.textContent = message;
+  }
 
-    // Build mailto body from all named fields
-    var lines  = [];
-    var subject = $form.data('subject') || 'Érdeklődés – ABNA Biztosítás';
-
-    $form.find('[name]').each(function () {
-      var $el   = $(this);
-      var name  = $el.attr('name');
-      var label = $el.closest('.form-group').find('.form-label').first().text().replace('*','').trim();
-      var val   = '';
-
-      if ($el.is('select')) {
-        val = $el.find('option:selected').text();
-      } else if ($el.is('input[type="radio"]')) {
-        if ($el.is(':checked')) val = $el.val();
-        else return; // skip unchecked radios
-      } else if ($el.is('input[type="checkbox"]')) {
-        val = $el.is(':checked') ? 'Igen' : 'Nem';
-        if (name === 'consent') return; // skip consent in body
+  function collect(form) {
+    var lines = [];
+    var seen = {};
+    form.querySelectorAll('[name]').forEach(function (el) {
+      if (el.name === 'consent' || el.name === '_gotcha' || seen[el.name]) return;
+      var value = '';
+      if (el.type === 'radio') {
+        var checked = form.querySelector('input[name="' + el.name + '"]:checked');
+        seen[el.name] = true;
+        value = checked ? checked.value : '';
+      } else if (el.type === 'checkbox') {
+        value = el.checked ? 'Igen' : '';
+      } else if (el.tagName === 'SELECT') {
+        value = el.value ? el.options[el.selectedIndex].text : '';
       } else {
-        val = $el.val().trim();
+        value = el.value.trim();
+      }
+      if (value) lines.push(fieldLabel(el) + ': ' + value);
+    });
+    return lines;
+  }
+
+  function showSuccess(form, viaMail) {
+    var card = form.closest('.form-card');
+    var success = card.querySelector('.form-success');
+    if (viaMail) {
+      var title = success.querySelector('.form-success-title');
+      if (title) title.textContent = 'Már csak el kell küldenie!';
+      var text = success.querySelector('[data-success-text]');
+      if (text) {
+        text.textContent = 'Megnyílt levelezőprogramja az elkészített üzenettel – kérjük, ott küldje el. ' +
+          'Ha nem nyílt meg, hívjon minket, vagy írjon a ' + MAIL_TO + ' címre.';
+      }
+    }
+    // On the mail-app path the visitor still has to press send there, so keep their answers on screen.
+    if (!viaMail) form.hidden = true;
+    success.classList.toggle('is-notice', viaMail);
+    success.hidden = false;
+    success.focus();
+    card.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+  }
+
+  document.querySelectorAll('form.abna-form').forEach(function (form) {
+    var fields = form.querySelectorAll('input, select, textarea');
+    var submit = form.querySelector('[type="submit"]');
+
+    fields.forEach(function (field) {
+      // Validate on leave, then live once the visitor has seen an error.
+      field.addEventListener('blur', function () {
+        if (field.type !== 'radio' && (field.value || field.hasAttribute('aria-invalid'))) {
+          showError(field, errorFor(field));
+        }
+      });
+      field.addEventListener('input', function () {
+        if (field.hasAttribute('aria-invalid')) showError(field, errorFor(field));
+      });
+      field.addEventListener('change', function () {
+        if (field.hasAttribute('aria-invalid')) showError(field, errorFor(field));
+      });
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var firstInvalid = null;
+      fields.forEach(function (field) {
+        if (field.type === 'radio') return;
+        var message = errorFor(field);
+        showError(field, message);
+        if (message && !firstInvalid) firstInvalid = field;
+      });
+      if (firstInvalid) {
+        firstInvalid.focus();
+        return;
       }
 
-      if (val && label) lines.push(label + ': ' + val);
-    });
+      var subject = form.getAttribute('data-subject') || 'Érdeklődés – ABNA Biztosítás';
+      var endpoint = form.getAttribute('action');
 
-    var body    = lines.join('\n') + '\n\n— Elküldve az abna.hu weboldallal';
-    var mailto  = 'mailto:hello@abna.hu'
-                + '?subject=' + encodeURIComponent(subject)
-                + '&body='    + encodeURIComponent(body);
+      if (endpoint) {
+        submit.disabled = true;
+        submit.classList.add('is-loading');
+        fetch(endpoint, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        }).then(function (res) {
+          if (!res.ok) throw new Error(res.status);
+          showSuccess(form, false);
+        }).catch(function () {
+          var status = form.querySelector('.form-status');
+          status.hidden = false;
+          status.textContent = 'Az üzenetet most nem sikerült elküldeni. Kérjük, próbálja újra, ' +
+            'vagy hívjon minket: +36 30 360 3390.';
+        }).finally(function () {
+          submit.disabled = false;
+          submit.classList.remove('is-loading');
+        });
+        return;
+      }
 
-    // Open mail client
-    window.location.href = mailto;
-
-    // Show success state
-    $form.fadeOut(300, function () {
-      $form.closest('.form-card').find('.form-success').addClass('visible').hide().fadeIn(400);
+      var body = collect(form).join('\n') + '\n\n— Elküldve az abna.hu weboldalról';
+      window.location.href = 'mailto:' + MAIL_TO +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+      showSuccess(form, true);
     });
   });
-
-  // Re-enable border on input
-  $(document).on('input change', 'form.abna-form .form-input, form.abna-form .form-select, form.abna-form .form-textarea', function () {
-    $(this).css('border-color', '');
-  });
-
-});
+})();
