@@ -1,0 +1,573 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T07:25:32+00:00",
+  "title": "Design System: ABNA",
+  "extensions": {
+    "colorMeta": {
+      "night": {
+        "role": "secondary",
+        "displayName": "Night",
+        "canonical": "#07122e",
+        "tonalRamp": [
+          "#07122e",
+          "#0b1a3f",
+          "#12285e",
+          "#1b3a85",
+          "#1c46b4",
+          "#2457d6",
+          "#9dbcff",
+          "#f3f6fc"
+        ]
+      },
+      "navy-900": {
+        "role": "secondary",
+        "displayName": "Night Navy",
+        "canonical": "#0b1a3f",
+        "tonalRamp": [
+          "#07122e",
+          "#0b1a3f",
+          "#12285e",
+          "#1b3a85",
+          "#1c46b4",
+          "#2457d6",
+          "#9dbcff",
+          "#f3f6fc"
+        ]
+      },
+      "navy-800": {
+        "role": "secondary",
+        "displayName": "Deep Navy",
+        "canonical": "#12285e",
+        "tonalRamp": [
+          "#07122e",
+          "#0b1a3f",
+          "#12285e",
+          "#1b3a85",
+          "#1c46b4",
+          "#2457d6",
+          "#9dbcff",
+          "#f3f6fc"
+        ]
+      },
+      "navy-700": {
+        "role": "secondary",
+        "displayName": "Bloom Navy",
+        "canonical": "#1b3a85",
+        "tonalRamp": [
+          "#07122e",
+          "#0b1a3f",
+          "#12285e",
+          "#1b3a85",
+          "#1c46b4",
+          "#2457d6",
+          "#9dbcff",
+          "#f3f6fc"
+        ]
+      },
+      "blue-600": {
+        "role": "primary",
+        "displayName": "Brand Blue",
+        "canonical": "#2457d6",
+        "tonalRamp": [
+          "#07122e",
+          "#0b1a3f",
+          "#12285e",
+          "#1b3a85",
+          "#1c46b4",
+          "#2457d6",
+          "#9dbcff",
+          "#dbe6ff"
+        ]
+      },
+      "blue-700": {
+        "role": "primary",
+        "displayName": "Pressed Blue",
+        "canonical": "#1c46b4",
+        "tonalRamp": [
+          "#07122e",
+          "#0b1a3f",
+          "#12285e",
+          "#1b3a85",
+          "#1c46b4",
+          "#2457d6",
+          "#9dbcff",
+          "#dbe6ff"
+        ]
+      },
+      "blue-300": {
+        "role": "neutral",
+        "displayName": "Ice Blue",
+        "canonical": "#9dbcff",
+        "tonalRamp": [
+          "#0b1a3f",
+          "#12285e",
+          "#1b3a85",
+          "#1c46b4",
+          "#2457d6",
+          "#9dbcff",
+          "#dbe6ff",
+          "#f3f6fc"
+        ]
+      },
+      "blue-100": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#dbe6ff",
+        "tonalRamp": [
+          "#0b1a3f",
+          "#12285e",
+          "#1b3a85",
+          "#1c46b4",
+          "#2457d6",
+          "#9dbcff",
+          "#dbe6ff",
+          "#f3f6fc"
+        ]
+      },
+      "sky-50": {
+        "role": "neutral",
+        "displayName": "Sky Paper",
+        "canonical": "#f3f6fc",
+        "tonalRamp": [
+          "#0b1a3f",
+          "#12285e",
+          "#1b3a85",
+          "#1c46b4",
+          "#2457d6",
+          "#9dbcff",
+          "#dbe6ff",
+          "#f3f6fc"
+        ]
+      },
+      "lamp": {
+        "role": "tertiary",
+        "displayName": "Lamp Amber",
+        "canonical": "#f4b740",
+        "tonalRamp": [
+          "oklch(15% 0.14 78)",
+          "oklch(25% 0.14 78)",
+          "oklch(35% 0.14 78)",
+          "oklch(48% 0.14 78)",
+          "oklch(60% 0.14 78)",
+          "oklch(72% 0.14 78)",
+          "oklch(85% 0.14 78)",
+          "oklch(95% 0.14 78)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#14203d",
+        "tonalRamp": [
+          "oklch(15% 0.05 265)",
+          "oklch(25% 0.05 265)",
+          "oklch(35% 0.05 265)",
+          "oklch(48% 0.05 265)",
+          "oklch(60% 0.05 265)",
+          "oklch(72% 0.05 265)",
+          "oklch(85% 0.05 265)",
+          "oklch(95% 0.05 265)"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "#48557a",
+        "tonalRamp": [
+          "oklch(15% 0.05 265)",
+          "oklch(25% 0.05 265)",
+          "oklch(35% 0.05 265)",
+          "oklch(48% 0.05 265)",
+          "oklch(60% 0.05 265)",
+          "oklch(72% 0.05 265)",
+          "oklch(85% 0.05 265)",
+          "oklch(95% 0.05 265)"
+        ]
+      },
+      "text-subtle": {
+        "role": "neutral",
+        "displayName": "Dust",
+        "canonical": "#5e6a89",
+        "tonalRamp": [
+          "oklch(15% 0.045 265)",
+          "oklch(25% 0.045 265)",
+          "oklch(35% 0.045 265)",
+          "oklch(48% 0.045 265)",
+          "oklch(60% 0.045 265)",
+          "oklch(72% 0.045 265)",
+          "oklch(85% 0.045 265)",
+          "oklch(95% 0.045 265)"
+        ]
+      },
+      "on-dark": {
+        "role": "neutral",
+        "displayName": "On Dark",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(25% 0 0)",
+          "oklch(35% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(60% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "on-dark-muted": {
+        "role": "neutral",
+        "displayName": "On Dark Muted",
+        "canonical": "#c3d0ee",
+        "tonalRamp": [
+          "oklch(15% 0.04 268)",
+          "oklch(25% 0.04 268)",
+          "oklch(35% 0.04 268)",
+          "oklch(48% 0.04 268)",
+          "oklch(60% 0.04 268)",
+          "oklch(72% 0.04 268)",
+          "oklch(85% 0.04 268)",
+          "oklch(95% 0.04 268)"
+        ]
+      },
+      "on-dark-subtle": {
+        "role": "neutral",
+        "displayName": "On Dark Subtle",
+        "canonical": "#9fb0d6",
+        "tonalRamp": [
+          "oklch(15% 0.05 268)",
+          "oklch(25% 0.05 268)",
+          "oklch(35% 0.05 268)",
+          "oklch(48% 0.05 268)",
+          "oklch(60% 0.05 268)",
+          "oklch(72% 0.05 268)",
+          "oklch(85% 0.05 268)",
+          "oklch(95% 0.05 268)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#dce3f0",
+        "tonalRamp": [
+          "oklch(15% 0.02 265)",
+          "oklch(25% 0.02 265)",
+          "oklch(35% 0.02 265)",
+          "oklch(48% 0.02 265)",
+          "oklch(60% 0.02 265)",
+          "oklch(72% 0.02 265)",
+          "oklch(85% 0.02 265)",
+          "oklch(95% 0.02 265)"
+        ]
+      },
+      "border-strong": {
+        "role": "neutral",
+        "displayName": "Field Edge",
+        "canonical": "#c3cde1",
+        "tonalRamp": [
+          "oklch(15% 0.03 265)",
+          "oklch(25% 0.03 265)",
+          "oklch(35% 0.03 265)",
+          "oklch(48% 0.03 265)",
+          "oklch(60% 0.03 265)",
+          "oklch(72% 0.03 265)",
+          "oklch(85% 0.03 265)",
+          "oklch(95% 0.03 265)"
+        ]
+      },
+      "danger": {
+        "role": "neutral",
+        "displayName": "Danger",
+        "canonical": "#b42318",
+        "tonalRamp": [
+          "oklch(15% 0.17 30)",
+          "oklch(25% 0.17 30)",
+          "oklch(35% 0.17 30)",
+          "oklch(48% 0.17 30)",
+          "oklch(60% 0.17 30)",
+          "oklch(72% 0.17 30)",
+          "oklch(85% 0.17 30)",
+          "oklch(95% 0.17 30)"
+        ]
+      },
+      "success": {
+        "role": "neutral",
+        "displayName": "Success",
+        "canonical": "#0f7a4f",
+        "tonalRamp": [
+          "oklch(15% 0.11 160)",
+          "oklch(25% 0.11 160)",
+          "oklch(35% 0.11 160)",
+          "oklch(48% 0.11 160)",
+          "oklch(60% 0.11 160)",
+          "oklch(72% 0.11 160)",
+          "oklch(85% 0.11 160)",
+          "oklch(95% 0.11 160)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Home hero headline only, set in masked lines with the lamp underline under the highlighted phrase."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2, balanced, 16-22ch."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card, strip and sidebar h3."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running text in Slate; 1rem under 640px; long-form at 1.75 line-height."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, form labels, nav links (550), chips."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-sm",
+        "value": "0 1px 2px rgba(11, 26, 63, .06), 0 2px 6px rgba(11, 26, 63, .05)",
+        "purpose": "Rest: service cards at rest."
+      },
+      {
+        "name": "shadow-md",
+        "value": "0 4px 10px rgba(11, 26, 63, .07), 0 12px 28px rgba(11, 26, 63, .08)",
+        "purpose": "Lift: hovered cards, form card, dark sidebar card."
+      },
+      {
+        "name": "shadow-lg",
+        "value": "0 10px 24px rgba(11, 26, 63, .10), 0 30px 60px rgba(11, 26, 63, .14)",
+        "purpose": "Float: the about-section address badge over the portrait."
+      },
+      {
+        "name": "shadow-btn",
+        "value": "0 6px 18px rgba(36, 87, 214, .32)",
+        "purpose": "Blue Glow under primary buttons; hover 0 10px 26px rgba(36, 87, 214, .38)."
+      },
+      {
+        "name": "night-drop",
+        "value": "0 8px 24px rgba(3, 10, 30, .28)",
+        "purpose": "White buttons and quote chips on navy; deepens to .38 on hover."
+      },
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 4px rgba(36, 87, 214, .16)",
+        "purpose": "Input focus halo (danger variant rgba(180, 35, 24, .14))."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Default curve for every transition, entrance and reveal."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(.65, 0, .35, 1)",
+        "purpose": "The beam sweep only."
+      },
+      {
+        "name": "t-fast",
+        "value": ".16s",
+        "purpose": "Press feedback, field border changes."
+      },
+      {
+        "name": "t-base",
+        "value": ".24s",
+        "purpose": "Colour, border and shadow state changes."
+      },
+      {
+        "name": "hero-mask-rise",
+        "value": "translateY(105%) -> 0, 1.05s ease-out, line 2 +.1s",
+        "purpose": "Hero headline lines rise out of an overflow-hidden mask once html.is-loaded is set (fonts ready, 1.5s failsafe)."
+      },
+      {
+        "name": "lamp-underline-draw",
+        "value": "scaleX(0) -> 1, .9s ease-out, .8s delay, origin left",
+        "purpose": "Amber underline beneath the highlighted hero phrase."
+      },
+      {
+        "name": "portrait-clip-reveal",
+        "value": "clip-path inset(100% 0 0 0 round 28px) -> inset(0), 1.3s .15s; img scale 1.08 -> 1, 1.8s",
+        "purpose": "Hero portrait reveals bottom-up (desktop only)."
+      },
+      {
+        "name": "hero-cascade",
+        "value": "opacity 0 + translateY(14px), .8s/.9s; delays .3 / .42 / .54s; notes 1 / 1.15s; subpage children 60ms steps capped at .24s",
+        "purpose": "Hero supporting content."
+      },
+      {
+        "name": "beam-sweep",
+        "value": "rotate(-14deg) -> rotate(22deg), 18s ease-in-out infinite alternate",
+        "purpose": "The one ambient motion: conic Ice Blue wedge with an amber source glow on home hero and CTA band."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity 0 + translateY(18px), .8s/.9s ease-out, delay calc(var(--d) * 90ms), --d capped at 3",
+        "purpose": "Scroll reveal, gated by html.js, IntersectionObserver threshold .12, rootMargin -8% bottom, once."
+      },
+      {
+        "name": "count-up",
+        "value": "1.4s expo-out, starts .5s after fonts ready",
+        "purpose": "Hero stats, from a visible default; skipped under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "beam frozen at 4deg; transforms, clip-paths, hover lifts and check-draw removed; .4s opacity fade, no delay",
+        "purpose": "prefers-reduced-motion: reduce path, required for any new motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "section-header",
+        "value": "900px"
+      },
+      {
+        "name": "md",
+        "value": "960px"
+      },
+      {
+        "name": "lg",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Every primary action: quote submit, call, sidebar CTA.",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"/></svg><span>Hívjon most</span></button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.5rem;border:1.5px solid transparent;border-radius:999px;font-family:'Inter',system-ui,sans-serif;font-size:1rem;font-weight:600;line-height:1.2;cursor:pointer;transition:background-color .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),border-color .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),box-shadow .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),transform .16s var(--ease-out, cubic-bezier(.16,1,.3,1));background:var(--blue-600, #2457d6);color:#fff;box-shadow:0 6px 18px rgba(36,87,214,.32);}.ds-btn-primary:hover{background:var(--blue-700, #1c46b4);box-shadow:0 10px 26px rgba(36,87,214,.38);}.ds-btn-primary:active{transform:translateY(1px) scale(.985);}.ds-btn-primary:focus-visible{outline:3px solid var(--blue-600, #2457d6);outline-offset:3px;}"
+    },
+    {
+      "name": "Secondary Button (on navy)",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ghost pill beside a white or primary button on night-navy grounds.",
+      "html": "<div class=\"ds-ground\"><button class=\"ds-btn-secondary\">Szolgáltatások</button></div>",
+      "css": ".ds-ground{background:radial-gradient(120% 90% at 85% 0%, var(--navy-700, #1b3a85) 0%, transparent 60%),linear-gradient(160deg, var(--night, #07122e) 0%, var(--navy-900, #0b1a3f) 45%, var(--navy-800, #12285e) 100%);padding:24px;border-radius:12px;}.ds-btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.5rem;border:1.5px solid transparent;border-radius:999px;font-family:'Inter',system-ui,sans-serif;font-size:1rem;font-weight:600;line-height:1.2;cursor:pointer;transition:background-color .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),border-color .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),box-shadow .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),transform .16s var(--ease-out, cubic-bezier(.16,1,.3,1));background:transparent;color:#fff;border-color:rgba(255,255,255,.42);}.ds-btn-secondary:hover{background:rgba(255,255,255,.1);border-color:#fff;}.ds-btn-secondary:active{transform:translateY(1px) scale(.985);}.ds-btn-secondary:focus-visible{outline:3px solid var(--blue-300, #9dbcff);outline-offset:3px;}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action on light grounds, e.g. service card footers.",
+      "html": "<button class=\"ds-btn-outline\">Ajánlatkérés</button>",
+      "css": ".ds-btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.5rem;border:1.5px solid transparent;border-radius:999px;font-family:'Inter',system-ui,sans-serif;font-size:1rem;font-weight:600;line-height:1.2;cursor:pointer;transition:background-color .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),border-color .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),box-shadow .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),transform .16s var(--ease-out, cubic-bezier(.16,1,.3,1));background:#fff;color:var(--blue-600, #2457d6);border-color:var(--border-strong, #c3cde1);}.ds-btn-outline:hover{border-color:var(--blue-600, #2457d6);}.ds-btn-outline:active{transform:translateY(1px) scale(.985);}.ds-btn-outline:focus-visible{outline:3px solid var(--blue-600, #2457d6);outline-offset:3px;}"
+    },
+    {
+      "name": "White Button (on navy)",
+      "kind": "button",
+      "refersTo": "button-white",
+      "description": "Large primary action inside the CTA band.",
+      "html": "<div class=\"ds-ground\"><button class=\"ds-btn-white\">Ingyenes ajánlat</button></div>",
+      "css": ".ds-ground{background:radial-gradient(120% 90% at 85% 0%, var(--navy-700, #1b3a85) 0%, transparent 60%),linear-gradient(160deg, var(--night, #07122e) 0%, var(--navy-900, #0b1a3f) 45%, var(--navy-800, #12285e) 100%);padding:24px;border-radius:12px;}.ds-btn-white{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.5rem;border:1.5px solid transparent;border-radius:999px;font-family:'Inter',system-ui,sans-serif;font-size:1rem;font-weight:600;line-height:1.2;cursor:pointer;transition:background-color .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),border-color .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),box-shadow .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),transform .16s var(--ease-out, cubic-bezier(.16,1,.3,1));min-height:56px;padding:1rem 1.875rem;font-size:1.0625rem;background:#fff;color:var(--navy-900, #0b1a3f);box-shadow:0 8px 24px rgba(3,10,30,.28);}.ds-btn-white:hover{background:var(--blue-100, #dbe6ff);}.ds-btn-white:active{transform:translateY(1px) scale(.985);}.ds-btn-white:focus-visible{outline:3px solid var(--blue-300, #9dbcff);outline-offset:3px;}"
+    },
+    {
+      "name": "Quote Chip",
+      "kind": "chip",
+      "refersTo": "quote-chip",
+      "description": "Hero quote picker: one white chip per product form, on navy.",
+      "html": "<div class=\"ds-ground\"><a href=\"#\" class=\"ds-quote-chip\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg><span>Lakásbiztosítás</span></a></div>",
+      "css": ".ds-ground{background:radial-gradient(120% 90% at 85% 0%, var(--navy-700, #1b3a85) 0%, transparent 60%),linear-gradient(160deg, var(--night, #07122e) 0%, var(--navy-900, #0b1a3f) 45%, var(--navy-800, #12285e) 100%);padding:24px;border-radius:12px;}.ds-quote-chip{display:inline-flex;align-items:center;gap:.5rem;min-height:52px;padding:.75rem 1.25rem .75rem 1rem;border-radius:12px;background:#fff;color:var(--navy-900, #0b1a3f);font-family:'Inter',system-ui,sans-serif;font-weight:650;text-decoration:none;box-shadow:0 8px 22px rgba(3,10,30,.3);transition:transform .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),box-shadow .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),background-color .24s;}.ds-quote-chip svg{color:var(--blue-600, #2457d6);}.ds-quote-chip:hover{transform:translateY(-2px);background:var(--blue-100, #dbe6ff);box-shadow:0 14px 30px rgba(3,10,30,.38);}.ds-quote-chip:active{transform:translateY(0);}.ds-quote-chip:focus-visible{outline:3px solid var(--blue-300, #9dbcff);outline-offset:3px;}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Quote form field with label.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-label\">Név <span class=\"ds-req\">*</span></span><input class=\"ds-input\" placeholder=\"Kovács Anna\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:.5rem;font-family:'Inter',system-ui,sans-serif;max-width:360px;}.ds-label{font-size:.9375rem;font-weight:600;color:var(--text, #14203d);}.ds-req{color:var(--danger, #b42318);}.ds-input{min-height:50px;padding:.75rem 1rem;border:1.5px solid var(--border-strong, #c3cde1);border-radius:12px;background:#fff;font:inherit;font-size:1rem;color:var(--text, #14203d);transition:border-color .16s,box-shadow .24s var(--ease-out, cubic-bezier(.16,1,.3,1));}.ds-input::placeholder{color:#67728f;}.ds-input:hover{border-color:#9aa8c6;}.ds-input:focus{outline:none;border-color:var(--blue-600, #2457d6);box-shadow:0 0 0 4px rgba(36,87,214,.16);}"
+    },
+    {
+      "name": "Choice Pill",
+      "kind": "chip",
+      "refersTo": "choice-pill",
+      "description": "Radio/checkbox options in quote forms.",
+      "html": "<div class=\"ds-pills\"><label class=\"ds-pill\"><input type=\"radio\" name=\"ds\" checked><span>Tulajdonos</span></label><label class=\"ds-pill\"><input type=\"radio\" name=\"ds\"><span>Bérlő</span></label></div>",
+      "css": ".ds-pills{display:flex;gap:.5rem;flex-wrap:wrap;font-family:'Inter',system-ui,sans-serif;}.ds-pill{display:inline-flex;align-items:center;gap:.5rem;min-height:46px;padding:.5rem 1rem .5rem .8rem;border:1.5px solid var(--border-strong, #c3cde1);border-radius:999px;background:#fff;cursor:pointer;accent-color:var(--blue-600, #2457d6);transition:border-color .16s,background-color .16s,box-shadow .24s;}.ds-pill input{width:18px;height:18px;margin:0;}.ds-pill input:focus-visible{outline:none;}.ds-pill span{font-size:.9375rem;font-weight:500;color:var(--text, #14203d);}.ds-pill:hover{border-color:#9aa8c6;}.ds-pill:has(input:checked){border-color:var(--blue-600, #2457d6);background:#eef3ff;}.ds-pill:has(input:focus-visible){box-shadow:0 0 0 4px rgba(36,87,214,.2);}"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "Product card: whole card is the link; lifts and flips its icon tile on hover.",
+      "html": "<a href=\"#\" class=\"ds-card\"><span class=\"ds-card-icon\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/></svg></span><h3>Lakásbiztosítás</h3><p>Otthona és ingóságai védelme tűz, víz és betörés ellen.</p><span class=\"ds-card-more\">Részletek <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></span></a>",
+      "css": ".ds-card{display:flex;flex-direction:column;max-width:340px;padding:clamp(1.5rem,2.5vw,2.25rem);background:#fff;border:1px solid var(--border, #dce3f0);border-radius:18px;box-shadow:0 1px 2px rgba(11,26,63,.06),0 2px 6px rgba(11,26,63,.05);color:var(--text, #14203d);text-decoration:none;font-family:'Inter',system-ui,sans-serif;transition:border-color .24s var(--ease-out, cubic-bezier(.16,1,.3,1)),box-shadow .4s var(--ease-out, cubic-bezier(.16,1,.3,1)),transform .4s var(--ease-out, cubic-bezier(.16,1,.3,1));}.ds-card:hover{border-color:rgba(36,87,214,.35);box-shadow:0 4px 10px rgba(11,26,63,.07),0 12px 28px rgba(11,26,63,.08);transform:translateY(-3px);}.ds-card:focus-visible{outline:3px solid var(--blue-600, #2457d6);outline-offset:3px;}.ds-card-icon{display:grid;place-items:center;width:56px;height:56px;margin-bottom:1.5rem;border-radius:14px;background:var(--sky-50, #f3f6fc);color:var(--blue-600, #2457d6);transition:background-color .24s,color .24s;}.ds-card:hover .ds-card-icon{background:var(--blue-600, #2457d6);color:#fff;}.ds-card h3{margin:0 0 .75rem;font-family:'Schibsted Grotesk','Inter',sans-serif;font-weight:750;font-size:1.375rem;line-height:1.25;letter-spacing:-.02em;}.ds-card p{margin:0 0 1.25rem;color:var(--text-muted, #48557a);line-height:1.65;}.ds-card-more{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.9375rem;color:var(--blue-600, #2457d6);}.ds-card-more svg{transition:transform .35s var(--ease-out, cubic-bezier(.16,1,.3,1));}.ds-card:hover .ds-card-more svg{transform:translateX(4px);}"
+    },
+    {
+      "name": "Navigation (on navy)",
+      "kind": "nav",
+      "refersTo": "nav-cta",
+      "description": "Transparent bar over the hero: muted links with a drawn underline, blue pill call button.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav-link\" aria-current=\"page\">Főoldal</a><a href=\"#\" class=\"ds-nav-link\">Lakás</a><a href=\"#\" class=\"ds-nav-link\">KGFB</a><a href=\"tel:+36303603390\" class=\"ds-nav-cta\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"/></svg><span>+36 30 360 3390</span></a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:.25rem;background:radial-gradient(120% 90% at 85% 0%, var(--navy-700, #1b3a85) 0%, transparent 60%),linear-gradient(160deg, var(--night, #07122e) 0%, var(--navy-900, #0b1a3f) 45%, var(--navy-800, #12285e) 100%);padding:24px;border-radius:12px;font-family:'Inter',system-ui,sans-serif;}.ds-nav-link{position:relative;padding:.5rem .75rem;font-size:.9375rem;font-weight:550;color:var(--on-dark-muted, #c3d0ee);text-decoration:none;border-radius:8px;transition:color .24s;}.ds-nav-link::after{content:'';position:absolute;left:.75rem;right:.75rem;bottom:2px;height:2px;border-radius:2px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease-out, cubic-bezier(.16,1,.3,1));}.ds-nav-link:hover,.ds-nav-link[aria-current=page]{color:#fff;}.ds-nav-link:hover::after{transform:scaleX(1);}.ds-nav-link[aria-current=page]::after{transform:scaleX(1);background:var(--blue-300, #9dbcff);}.ds-nav-link:focus-visible{outline:3px solid var(--blue-300, #9dbcff);outline-offset:3px;}.ds-nav-cta{display:inline-flex;align-items:center;gap:.5rem;margin-left:auto;min-height:44px;padding:.5rem 1.125rem;border-radius:999px;background:var(--blue-600, #2457d6);color:#fff;font-size:.9375rem;font-weight:600;font-variant-numeric:tabular-nums;text-decoration:none;transition:background-color .24s,box-shadow .24s;}.ds-nav-cta:hover{background:var(--blue-700, #1c46b4);box-shadow:0 6px 18px rgba(36,87,214,.32);}.ds-nav-cta:focus-visible{outline:3px solid var(--blue-300, #9dbcff);outline-offset:3px;}"
+    },
+    {
+      "name": "Hero Headline with Lamp Underline",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Signature: heavy display headline, Ice Blue highlight, amber lamp underline drawn on entrance, beam sweeping behind.",
+      "html": "<div class=\"ds-hero\"><div class=\"ds-beam\" aria-hidden=\"true\"></div><h1 class=\"ds-hero-title\"><span class=\"ds-line\"><span>A Biztosítás</span></span><span class=\"ds-line\"><span class=\"ds-hl\">Nem Alszik!</span></span></h1></div>",
+      "css": ".ds-hero{position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(120% 90% at 85% 0%, var(--navy-700, #1b3a85) 0%, transparent 60%),linear-gradient(160deg, var(--night, #07122e) 0%, var(--navy-900, #0b1a3f) 45%, var(--navy-800, #12285e) 100%);padding:24px;border-radius:12px;padding:48px 32px;}.ds-beam{position:absolute;top:6%;left:74%;width:0;height:0;pointer-events:none;z-index:0;}.ds-beam::before{content:'';position:absolute;left:-110vmax;top:-110vmax;width:220vmax;height:220vmax;background:conic-gradient(from 196deg at 50% 50%,transparent 0deg,rgba(157,188,255,.13) 10deg,rgba(157,188,255,.05) 22deg,transparent 32deg);-webkit-mask-image:radial-gradient(circle at 50% 50%,#000 0,rgba(0,0,0,.6) 18%,transparent 42%);mask-image:radial-gradient(circle at 50% 50%,#000 0,rgba(0,0,0,.6) 18%,transparent 42%);transform:rotate(-14deg);animation:ds-beam 18s cubic-bezier(.65,0,.35,1) infinite alternate;}.ds-beam::after{content:'';position:absolute;left:-160px;top:-160px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(244,183,64,.16),rgba(157,188,255,.06) 45%,transparent 70%);}@keyframes ds-beam{from{transform:rotate(-14deg);}to{transform:rotate(22deg);}}.ds-hero-title{position:relative;z-index:1;margin:0;font-family:'Schibsted Grotesk','Inter',sans-serif;font-size:clamp(3rem,7.2vw,6rem);font-weight:850;line-height:.98;letter-spacing:-.04em;color:#fff;}.ds-line{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em;}.ds-line>span{display:inline-block;animation:ds-rise 1.05s var(--ease-out, cubic-bezier(.16,1,.3,1)) both;}.ds-line:nth-child(2)>span{animation-delay:.1s;}.ds-hl{position:relative;color:var(--blue-300, #9dbcff);}.ds-hl::after{content:'';position:absolute;left:.02em;right:.1em;bottom:.02em;height:.07em;border-radius:.07em;background:var(--lamp, #f4b740);transform-origin:left center;animation:ds-draw .9s .8s var(--ease-out, cubic-bezier(.16,1,.3,1)) both;}@keyframes ds-rise{from{transform:translateY(105%);}}@keyframes ds-draw{from{transform:scaleX(0);}}@media (prefers-reduced-motion: reduce){.ds-beam::before{animation:none;transform:rotate(4deg);}.ds-line>span,.ds-hl::after{animation:none;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Light That Stays On",
+    "overview": "**Creative North Star: \"The Light That Stays On\"**\n\nThe slogan is the system. Night-navy grounds (hero, page hero, CTA band, footer) frame calm white and sky-tinted reading sections, and on the dark grounds one slow beam of light sweeps and one amber lamp glows. Everything else is quiet, legible and local: a real advisor's portrait, a real address, a phone number that stays one tap away.\n\nDensity is generous and unhurried; sections breathe on a fluid `section-y` rhythm and content sits in a 1200px container. The incumbent navy/blue identity from the original site is kept; refinement sharpened it into a ramp from night to sky and added the single warm note. Hungarian copy needs latin-ext glyphs (ő, ű) everywhere, so both faces are self-hosted with latin-ext subsets and no third-party font or script is ever loaded.",
+    "keyCharacteristics": [
+      "Night-navy grounds bookend every page; white and sky-50 carry the reading.",
+      "Brand blue is the action colour; amber \"lamp\" is the only warm hue and is used as light, never as fill.",
+      "Heavy, tight Schibsted Grotesk display over plain Inter body.",
+      "Pill buttons, soft-cornered cards, navy-tinted layered shadows.",
+      "One ambient motion (the beam), one choreographed entrance (the hero), quiet capped reveals everywhere else."
+    ],
+    "rules": [
+      {
+        "name": "The One Lamp Rule",
+        "body": "Amber is the only warm colour and appears as light (a stroke, a glow, a star), at most a few times per page. It never fills a surface or carries text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Bookend Rule",
+        "body": "Every page opens on a night-navy ground and closes on one (CTA band and/or footer). Reading content lives between them on white or sky-50.",
+        "section": "colors"
+      },
+      {
+        "name": "The Heavy-Head, Plain-Body Rule",
+        "body": "Schibsted Grotesk is for headings, figures, the logo and the error code; Inter for every sentence, label and control.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tinted Shadow Rule",
+        "body": "Every shadow is a navy or brand-blue rgba, never grey or black, and never a hard offset.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** open and close every page on a night-navy ground and keep reading content on white or sky-50.",
+      "**Do** use Brand Blue for every primary action and keep the phone number one tap away (nav call button, hero, sidebar, CTA).",
+      "**Do** keep the lamp as light: underline, glow, star, hover underline.",
+      "**Do** switch the focus ring to Ice Blue on dark grounds; keep it Brand Blue on light.",
+      "**Do** gate every entrance on `html.js`, cap reveal stagger at 270ms, and ship the reduced-motion path with any new motion.",
+      "**Do** use the self-hosted Lucide sprite at 1.75 stroke for icons and keep latin-ext subsets for both faces."
+    ],
+    "donts": [
+      "**Don't** fill a surface, button or text with amber.",
+      "**Don't** use neutral grey or black shadows, or hard offset shadows.",
+      "**Don't** add a second ambient loop; the beam is the only infinite motion.",
+      "**Don't** load fonts, icons or scripts from a third-party host.",
+      "**Don't** set body copy or labels in Schibsted Grotesk, or headings in Inter."
+    ]
+  }
+}
